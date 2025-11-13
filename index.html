@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>德國露營車公路旅行行程表</title>
+    <title>德國露營車公路旅行優化版行程表</title>
     <!-- 載入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 載入 Inter 字體 -->
@@ -13,6 +13,15 @@
         body {
             font-family: 'Inter', 'Noto Sans TC', sans-serif;
         }
+        /* 自定義列表樣式 */
+        .content-section ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen p-4 md:p-8">
@@ -20,7 +29,13 @@
     <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <div class="p-6 md:p-10">
             <!-- 標題和副標題 -->
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">德國露營車公路旅行行程表</h1>
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">德國露營車公路旅行優化版行程表</h1>
+            <p class="text-center text-gray-600 mt-2">
+                根據「<strong>無慕尼黑，增加博登湖/黑森林深度體驗，優化賽後長程駕駛</strong>」策略整合
+            </p>
+            <p class="text-center text-gray-500 mt-1 text-sm">
+                此版本將長途駕駛日錯開，並讓行程路線更順暢，適合露營車家庭旅行。
+            </p>
 
             <!-- 行程表容器 -->
             <div class="mt-8 overflow-x-auto relative rounded-lg border border-gray-200">
@@ -75,7 +90,7 @@
                             <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/6（一）</strong></td>
                             <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
                             <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">賽後放鬆→<strong>短程移動</strong> → <strong>海德堡或斯圖加特附近休息</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">賽後放鬆→<strong>短程移動</strong> → <strong>海德堡或斯圖加T附近休息</strong></td>
                             <td class="px-5 py-4 text-sm text-emerald-800"><strong>中途點露營地</strong> (如：海德堡/斯圖加特)</td>
                             <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 - 3 小時</strong></td>
                         </tr>
@@ -145,6 +160,72 @@
                 <p><span class="inline-block w-4 h-4 rounded-full bg-emerald-100 border border-emerald-300 mr-2 align-middle"></span><span class="font-semibold">綠色標示：</span> 深度體驗與優化駕駛日</p>
                 <p><span class="inline-block w-4 h-4 rounded-full bg-amber-100 border border-amber-300 mr-2 align-middle mt-2"></span><span class="font-semibold">黃色標示：</span> 主要長程移動日</p>
             </div>
+
+            <!-- ===== 新增露營地區塊 ===== -->
+            <hr class="my-10 border-gray-200">
+
+            <div class="content-section">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">德國南部親子泳池露營地推薦</h2>
+
+                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">1. 黑森林（Titisee/Triberg）親子泳池營地推薦</h3>
+                <ul>
+                    <li>
+                        <strong>Badeparadies Schwarzwald</strong>（蒂蒂湖水上樂園/SPA天堂）
+                        <p class="text-sm text-gray-600 ml-4">遊戲專區＋23條滑水道＋人造浪泳池。鄰近蒂蒂湖（Camping Bankenhof, Campingplatz Titisee），露營地步行可到。家庭票價優惠，泳池＋兒童遊樂設施＋保暖SPA。
+                        <br><a href="https://www.badeparadies-schwarzwald.de/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                    <li>
+                        <strong>Ferienanlage Kirchzarten</strong>
+                        <p class="text-sm text-gray-600 ml-4">黑森林最知名親子營地，設有戶外泳池、滑水道、兒童活動團隊，暑假專設遊戲區。
+                        <br><a href="https://www.camping-kirchzarten.de/en/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">2. 羅曼蒂克大道附近親子、泳池營地推薦</h3>
+                <ul>
+                    <li>
+                        <strong>Camping Tauberromantik</strong>（Rothenburg ob der Tauber）
+                        <p class="text-sm text-gray-600 ml-4">步行可達中世紀古城，設遊戲場、大草坪、泳池，家庭評價高。
+                        <br><a href="https://www.camping-tauberromantik.de/en/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                    <li>
+                        <strong>Campingplatz Main-Spessart-Park</strong>（離Würzburg不遠）
+                        <p class="text-sm text-gray-600 ml-4">大型親子遊樂場、戶外游泳池，夏季有兒童專屬活動。
+                        <br><a href="https://www.main-spessart-camping.de/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">3. 阿爾卑斯大道／新天鵝堡區域</h3>
+                <ul>
+                    <li>
+                        <strong>Camping Brunnen</strong>（Füssen近新天鵝堡）
+                        <p class="text-sm text-gray-600 ml-4">湖畔位置，親子戲水設施、家庭草坪、湖泳活動。
+                        <br><a href="https://www.camping-brunnen.de/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">4. 慕尼黑近郊親子泳池營地</h3>
+                <ul>
+                    <li>
+                        <strong>Campingplatz München-Obermenzing</strong>
+                        <p class="text-sm text-gray-600 ml-4">市區近郊，泳池設施，遊戲場，交通/購物便利。
+                        <br><a href="https://www.campingmuenchen.de/en/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                    <li>
+                        <strong>Cavalluna Park</strong>（慕尼黑）
+                        <p class="text-sm text-gray-600 ml-4">雖非露營地本身，但與附設遊樂設施和馬術秀結合，家庭票熱門。
+                        <br><a href="https://www.cavalluna.com/park/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">使用說明</h3>
+                <ul class="text-sm text-gray-700">
+                    <li>官網均可線上預訂營位，有家庭專區及暑期親子遊樂設施。</li>
+                    <li>Badeparadies Schwarzwald、Camping Kirchzarten、Tauberromantik 預訂暑期最熱門，建議提前規劃。</li>
+                    <li>如需指定哪一段路線地點再細查當地家庭露營地或有特殊親子設施，可以直接指名地區我再查詳細名單！</li>
+                </ul>
+            </div>
+            <!-- ===== 露營地區塊結束 ===== -->
 
         </div>
     </div>
