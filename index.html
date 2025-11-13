@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德國露營車公路旅行行程表</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 載入 Inter 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 應用 Inter 字體 */
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-4 md:p-8">
+
+    <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="p-6 md:p-10">
+            <!-- 標題和副標題 -->
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">德國露營車公路旅行行程表</h1>
+
+            <!-- 行程表容器 -->
+            <div class="mt-8 overflow-x-auto relative rounded-lg border border-gray-200">
+                <table class="min-w-full divide-y divide-gray-200 align-middle">
+                    <!-- 表頭 -->
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">日期（台灣）</th>
+                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">台灣時間</th>
+                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">德國時間</th>
+                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider min-w-[300px]">行程內容（優化重點）</th>
+                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">住宿地點</th>
+                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">露營車預估車程</th>
+                        </tr>
+                    </thead>
+                    <!-- 表格內容 -->
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/2（四）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">23:35（晚）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">17:35（同日）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">桃園機場搭CI061直飛法蘭克福</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">機上</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/3（五）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">12:15（中午）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">06:15（清晨）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">法蘭克福抵達→取露營車→羅曼蒂克大道（如：羅騰堡）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">羅曼蒂克大道沿線露營地</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">約 <strong>2 小時</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/4（六）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">上午</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">早上</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">駕車前往Roth賽事會場→報到/EXPO</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">Roth賽事營區（下午交車進駐）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">約 <strong>1.5 小時</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/5（日）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">全天</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">全天</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">Challenge Roth比賽日/家人觀賽活動</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">Roth賽事營區</td>
+                            <td class="px-5 py-4 text-sm text-gray-700"><strong>0 小時</strong></td>
+                        </tr>
+                        <!-- 標示優化日 -->
+                        <tr class="bg-emerald-50">
+                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/6（一）</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">賽後放鬆→<strong>短程移動</strong> → <strong>海德堡或斯圖加特附近休息</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>中途點露營地</strong> (如：海德堡/斯圖加特)</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 - 3 小時</strong></td>
+                        </tr>
+                        <tr class="bg-emerald-50">
+                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/7（二）</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>移動</strong> → 黑森林區（如：蒂蒂湖） → <strong>湖區野餐或親子活動</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">黑森林區露營地</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 - 3 小時</strong></td>
+                        </tr>
+                        <tr class="bg-emerald-50">
+                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/8（三）</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>黑森林步道/自然體驗 (深度遊)</strong> → <strong>特色小鎮</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">黑森林區露營地</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>0 小時</strong></td>
+                        </tr>
+                        <tr class="bg-emerald-50">
+                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/9（四）</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">黑森林 → <strong>博登湖 (Bodensee)</strong> → <strong>湖畔漫步/小鎮探索</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>博登湖區露營地</strong> (如：Lindau/Konstanz)</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 小時</strong></td>
+                        </tr>
+                        <tr class="bg-emerald-50">
+                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/10（五）</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">博登湖 → <strong>阿爾卑斯大道</strong> → <strong>童話城堡/小鎮（新天鵝堡）</strong></td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">阿爾卑斯大道露營地 (Schwangau/Füssen)</td>
+                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>1.5 小時</strong></td>
+                        </tr>
+                        <!-- 標示長程移動日 -->
+                        <tr class="bg-amber-50">
+                            <td class="px-5 py-4 text-sm font-medium text-amber-900"><strong>7/11（六）</strong></td>
+                            <td class="px-5 py-4 text-sm text-amber-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-amber-800">全天</td>
+                            <td class="px-5 py-4 text-sm text-amber-800"><strong>長程移動</strong>：城堡區 → <strong>法蘭克福</strong> → 市區漫步/採購</td>
+                            <td class="px-5 py-4 text-sm text-amber-800">法蘭克福露營地</td>
+                            <td class="px-5 py-4 text-sm text-amber-800">約 <strong>5.5 - 6 小時</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/12（日）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">18:30（晚）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">12:30（中午）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">法蘭克福露營地 → <strong>露營車還車</strong> → 法蘭克福機場搭CI062返台</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">機上</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">還車/機場手續需預留 <strong>3 小時以上</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/13（一）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">06:40（清晨+1日）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">12:40（同日+1）</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">桃園機場抵達</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">-</td>
+                            <td class="px-5 py-4 text-sm text-gray-700">旅程結束</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- 註記 -->
+            <div class="mt-6 text-sm text-gray-600">
+                <p><span class="inline-block w-4 h-4 rounded-full bg-emerald-100 border border-emerald-300 mr-2 align-middle"></span><span class="font-semibold">綠色標示：</span> 深度體驗與優化駕駛日</p>
+                <p><span class="inline-block w-4 h-4 rounded-full bg-amber-100 border border-amber-300 mr-2 align-middle mt-2"></span><span class="font-semibold">黃色標示：</span> 主要長程移動日</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
