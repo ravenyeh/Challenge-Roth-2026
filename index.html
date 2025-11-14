@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>德國露營車公路旅行優化版行程表</title>
+    <title>德國 Roth + 黑森林定點深度遊</title>
     <!-- 載入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 載入 Inter 字體 -->
@@ -13,15 +13,6 @@
         body {
             font-family: 'Inter', 'Noto Sans TC', sans-serif;
         }
-        /* 自定義列表樣式 */
-        .content-section ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            margin-top: 0.5rem;
-        }
-        .content-section li {
-            margin-bottom: 0.5rem;
-        }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen p-4 md:p-8">
@@ -29,203 +20,161 @@
     <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
         <div class="p-6 md:p-10">
             <!-- 標題和副標題 -->
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">德國露營車公路旅行優化版行程表</h1>
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">德國 Challenge Roth + 黑森林定點深度遊</h1>
             <p class="text-center text-gray-600 mt-2">
-                根據「<strong>無慕尼黑，增加博登湖/黑森林深度體驗，優化賽後長程駕駛</strong>」策略整合
+                <strong>策略：以 Camping Kirchzarten 為「基地營」</strong>
             </p>
             <p class="text-center text-gray-500 mt-1 text-sm">
-                此版本將長途駕駛日錯開，並讓行程路線更順暢，適合露營車家庭旅行。
+                賽後不更換營地，7天定點深度體驗黑森林，最大化親子同樂時間。
             </p>
 
-            <!-- 行程表容器 -->
-            <div class="mt-8 overflow-x-auto relative rounded-lg border border-gray-200">
+            <!-- 總覽行程 -->
+            <div class="mt-10">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">行程總覽 (7/3 - 7/13)</h2>
+                <ul class="list-disc list-inside space-y-2 text-gray-700">
+                    <li><strong>7/3 (五)</strong> - 台灣出發 → 法蘭克福抵達、租車</li>
+                    <li><strong>7/4 (六)</strong> - Frankfurt → Roth (約 2 小時) | Challenge Roth 報到</li>
+                    <li><strong>7/5 (日)</strong> - <span class="font-bold text-red-600">⭐ Challenge Roth 比賽日 ⭐</span></li>
+                    <li><strong>7/6 (一) - 7/12 (六)</strong> - Roth → Camping Kirchzarten (約 2-2.5 小時)，以此為基地，<span class="font-bold text-emerald-700">黑森林深度體驗 (7天)</span></li>
+                    <li><strong>7/13 (日)</strong> - 返回法蘭克福 (約 3.5-4 小時)、還車、機場</li>
+                </ul>
+            </div>
+
+            <!-- 核心行程表 -->
+            <hr class="my-10 border-gray-200">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🏕️ 黑森林 7 天核心行程 (Camping Kirchzarten 為基地)</h2>
+            <div class="mt-4 overflow-x-auto relative rounded-lg border border-gray-200">
                 <table class="min-w-full divide-y divide-gray-200 align-middle">
-                    <!-- 表頭 -->
                     <thead class="bg-gray-50">
                         <tr>
-                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">日期（台灣）</th>
-                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">台灣時間</th>
-                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">德國時間</th>
-                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider min-w-[300px]">行程內容（優化重點）</th>
-                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">住宿地點</th>
-                            <th scope="col" class="px-5 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">露營車預估車程</th>
+                            <th classcol="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">日期</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">營地</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">上午活動</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">下午活動</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">晚餐</th>
                         </tr>
                     </thead>
-                    <!-- 表格內容 -->
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/2（四）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">23:35（晚）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">17:35（同日）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">桃園機場搭CI061直飛法蘭克福</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">機上</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">-</td>
+                        <tr class="bg-blue-50">
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/6 (一)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Camping Kirchzarten</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Roth → 營地 (2-2.5h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地熟悉、游泳池</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地</td>
                         </tr>
                         <tr>
-                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/3（五）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">12:15（中午）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">06:15（清晨）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">法蘭克福抵達→取露營車→羅曼蒂克大道（如：羅騰堡）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">羅曼蒂克大道沿線露營地</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">約 <strong>2 小時</strong></td>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/7 (二)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Camping Kirchzarten</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Badeparadies 全天 (9-12h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">樂園 (13-17h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地烤肉</td>
                         </tr>
                         <tr>
-                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/4（六）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">上午</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">早上</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">駕車前往Roth賽事會場→報到/EXPO</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">Roth賽事營區（下午交車進駐）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">約 <strong>1.5 小時</strong></td>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/8 (三)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Camping Kirchzarten</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Badeparadies (9-12h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">蒂蒂湖 (13-16h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">湖邊小鎮</td>
                         </tr>
                         <tr>
-                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/5（日）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">全天</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">全天</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">Challenge Roth比賽日/家人觀賽活動</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">Roth賽事營區</td>
-                            <td class="px-5 py-4 text-sm text-gray-700"><strong>0 小時</strong></td>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/9 (四)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Camping Kirchzarten</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Badeparadies (9-11h) (最後)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">轉移 + 營地休息</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地</td>
                         </tr>
-                        <!-- 標示優化日 -->
-                        <tr class="bg-emerald-50">
-                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/6（一）</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">賽後放鬆→<strong>短程移動</strong> → <strong>海德堡或斯圖加T附近休息</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>中途點露營地</strong> (如：海德堡/斯圖加特)</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 - 3 小時</strong></td>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/10 (五)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Camping Kirchzarten</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">選一：Triberg / Feldberg / 樹冠步道</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">同上自然景點</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地烤肉</td>
                         </tr>
-                        <tr class="bg-emerald-50">
-                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/7（二）</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">上午/下午</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>移動</strong> → 黑森林區（如：蒂蒂湖） → <strong>湖區野餐或親子活動</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">黑森林區露營地</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 - 3 小時</strong></td>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/11 (六)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">Camping Kirchzarten</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地游泳池 + Schiltach 小鎮</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">輕鬆遊樂場</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">營地</td>
                         </tr>
-                        <tr class="bg-emerald-50">
-                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/8（三）</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>黑森林步道/自然體驗 (深度遊)</strong> → <strong>特色小鎮</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">黑森林區露營地</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>0 小時</strong></td>
-                        </tr>
-                        <tr class="bg-emerald-50">
-                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/9（四）</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">黑森林 → <strong>博登湖 (Bodensee)</strong> → <strong>湖畔漫步/小鎮探索</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800"><strong>博登湖區露營地</strong> (如：Lindau/Konstanz)</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>2.5 小時</strong></td>
-                        </tr>
-                        <tr class="bg-emerald-50">
-                            <td class="px-5 py-4 text-sm font-medium text-emerald-900"><strong>7/10（五）</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">博登湖 → <strong>阿爾卑斯大道</strong> → <strong>童話城堡/小鎮（新天鵝堡）</strong></td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">阿爾卑斯大道露營地 (Schwangau/Füssen)</td>
-                            <td class="px-5 py-4 text-sm text-emerald-800">約 <strong>1.5 小時</strong></td>
-                        </tr>
-                        <!-- 標示長程移動日 -->
                         <tr class="bg-amber-50">
-                            <td class="px-5 py-4 text-sm font-medium text-amber-900"><strong>7/11（六）</strong></td>
-                            <td class="px-5 py-4 text-sm text-amber-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-amber-800">全天</td>
-                            <td class="px-5 py-4 text-sm text-amber-800"><strong>長程移動</strong>：城堡區 → <strong>法蘭克福</strong> → 市區漫步/採購</td>
-                            <td class="px-5 py-4 text-sm text-amber-800">法蘭克福露營地</td>
-                            <td class="px-5 py-4 text-sm text-amber-800">約 <strong>5.5 - 6 小時</strong></td>
-                        </tr>
-                        <tr>
-                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/12（日）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">18:30（晚）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">12:30（中午）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">法蘭克福露營地 → <strong>露營車還車</strong> → 法蘭克福機場搭CI062返台</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">機上</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">還車/機場手續需預留 <strong>3 小時以上</strong></td>
-                        </tr>
-                        <tr>
-                            <td class="px-5 py-4 text-sm font-medium text-gray-900">7/13（一）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">06:40（清晨+1日）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">12:40（同日+1）</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">桃園機場抵達</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">-</td>
-                            <td class="px-5 py-4 text-sm text-gray-700">旅程結束</td>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/12 (日)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">返回 Frankfurt</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">退營 (8-9h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">開車返回 (3.5-4h)</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">法蘭克福</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
-            <!-- 註記 -->
-            <div class="mt-6 text-sm text-gray-600">
-                <p><span class="inline-block w-4 h-4 rounded-full bg-emerald-100 border border-emerald-300 mr-2 align-middle"></span><span class="font-semibold">綠色標示：</span> 深度體驗與優化駕駛日</p>
-                <p><span class="inline-block w-4 h-4 rounded-full bg-amber-100 border border-amber-300 mr-2 align-middle mt-2"></span><span class="font-semibold">黃色標示：</span> 主要長程移動日</p>
-            </div>
 
-            <!-- ===== 新增露營地區塊 ===== -->
+            <!-- 核心景點表 -->
             <hr class="my-10 border-gray-200">
-
-            <div class="content-section">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">德國南部親子泳池露營地推薦</h2>
-
-                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">1. 黑森林（Titisee/Triberg）親子泳池營地推薦</h3>
-                <ul>
-                    <li>
-                        <strong>Badeparadies Schwarzwald</strong>（蒂蒂湖水上樂園/SPA天堂）
-                        <p class="text-sm text-gray-600 ml-4">遊戲專區＋23條滑水道＋人造浪泳池。鄰近蒂蒂湖（Camping Bankenhof, Campingplatz Titisee），露營地步行可到。家庭票價優惠，泳池＋兒童遊樂設施＋保暖SPA。
-                        <br><a href="https://www.badeparadies-schwarzwald.de/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                    <li>
-                        <strong>Ferienanlage Kirchzarten</strong>
-                        <p class="text-sm text-gray-600 ml-4">黑森林最知名親子營地，設有戶外泳池、滑水道、兒童活動團隊，暑假專設遊戲區。
-                        <br><a href="https://www.camping-kirchzarten.de/en/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                </ul>
-
-                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">2. 羅曼蒂克大道附近親子、泳池營地推薦</h3>
-                <ul>
-                    <li>
-                        <strong>Camping Tauberromantik</strong>（Rothenburg ob der Tauber）
-                        <p class="text-sm text-gray-600 ml-4">步行可達中世紀古城，設遊戲場、大草坪、泳池，家庭評價高。
-                        <br><a href="https://www.camping-tauberromantik.de/en/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                    <li>
-                        <strong>Campingplatz Main-Spessart-Park</strong>（離Würzburg不遠）
-                        <p class="text-sm text-gray-600 ml-4">大型親子遊樂場、戶外游泳池，夏季有兒童專屬活動。
-                        <br><a href="https://www.main-spessart-camping.de/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                </ul>
-
-                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">3. 阿爾卑斯大道／新天鵝堡區域</h3>
-                <ul>
-                    <li>
-                        <strong>Camping Brunnen</strong>（Füssen近新天鵝堡）
-                        <p class="text-sm text-gray-600 ml-4">湖畔位置，親子戲水設施、家庭草坪、湖泳活動。
-                        <br><a href="https://www.camping-brunnen.de/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                </ul>
-
-                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">4. 慕尼黑近郊親子泳池營地</h3>
-                <ul>
-                    <li>
-                        <strong>Campingplatz München-Obermenzing</strong>
-                        <p class="text-sm text-gray-600 ml-4">市區近郊，泳池設施，遊戲場，交通/購物便利。
-                        <br><a href="https://www.campingmuenchen.de/en/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                    <li>
-                        <strong>Cavalluna Park</strong>（慕尼黑）
-                        <p class="text-sm text-gray-600 ml-4">雖非露營地本身，但與附設遊樂設施和馬術秀結合，家庭票熱門。
-                        <br><a href="https://www.cavalluna.com/park/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">官方網站</a></p>
-                    </li>
-                </ul>
-
-                <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">使用說明</h3>
-                <ul class="text-sm text-gray-700">
-                    <li>官網均可線上預訂營位，有家庭專區及暑期親子遊樂設施。</li>
-                    <li>Badeparadies Schwarzwald、Camping Kirchzarten、Tauberromantik 預訂暑期最熱門，建議提前規劃。</li>
-                    <li>如需指定哪一段路線地點再細查當地家庭露營地或有特殊親子設施，可以直接指名地區我再查詳細名單！</li>
-                </ul>
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🎯 核心景點一覽表</h2>
+            <div class="mt-4 overflow-x-auto relative rounded-lg border border-gray-200">
+                <table class="min-w-full divide-y divide-gray-200 align-middle">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">景點</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">距離 Kirchzarten</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">活動</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">適齡</th>
+                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">推薦度</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>Badeparadies Schwarzwald</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">20 分</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">水上樂園（波浪池、滑水道、兒童區）</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">3-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>蒂蒂湖 (Titisee)</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">5 分</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">划船、遊樂場、沙灘、冰淇淋</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">3-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>Triberg 瀑布</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">45 分</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">瀑布步道、布谷鳥鐘</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">4-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>Feldberg 登高</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">30 分</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">纜車、山頂草地、短步道</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">3-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>樹冠步道</strong></td>
+                            <td class-"px-4 py-4 text-sm text-gray-700">20 分</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">走在樹頂上、獨特體驗</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">5-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>Schiltach 小鎮</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">30 分</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">木框建築、河邊散步、拍照</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">3-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>Freiburg 古城</strong></td>
+                            <td class="px-4 py-4 text-sm text-gray-700">1.5h</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">大教堂、小水道、Schlossberg 纜車</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">3-7 歲</td>
+                            <td class="px-4 py-4 text-sm text-gray-700">⭐⭐⭐⭐</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <!-- ===== 露營地區塊結束 ===== -->
 
         </div>
     </div>
