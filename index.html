@@ -3,405 +3,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>德國 Roth + 黑森林 + 阿爾薩斯 14天多基地移動遊</title>
-    <!-- 載入 Tailwind CSS -->
+    <title>Triathlon Reise · Roth + Schwarzwald + Alsace · 2026 夏</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 載入 Inter 字體 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 字體：Cormorant Garamond (拉丁 serif) + Noto Sans TC (中文 sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* 應用 Inter 字體 */
-        body {
-            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        :root {
+            --cream: #EFE7D2;
+            --paper: #FAF5E8;
+            --paper-2: #F5EBD5;
+            --paper-3: #EDE0C2;
+            --paper-4: #E5D5B0;
+            --paper-5: #D6C193;
+            --line: #D8C9A6;
+            --coffee: #2C2419;
+            --coffee-soft: #4A3D2A;
+            --ink: #3A2E1F;
+            --ink-soft: #7A6B55;
+            --ink-faint: #B5A684;
+            --accent: #8B3A1F;
+            --accent-warm: #B85C32;
         }
+        body {
+            font-family: 'Noto Sans TC', 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            font-weight: 400;
+        }
+        .font-serif-it { font-family: 'Cormorant Garamond', serif; }
+        h1, h2, h3, h4 { font-family: 'Noto Sans TC', sans-serif; }
+        .display-serif { font-family: 'Cormorant Garamond', serif; font-weight: 600; letter-spacing: 0.01em; }
+
+        /* Tab buttons */
+        .tab-btn {
+            background: var(--paper);
+            color: var(--ink-soft);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 14px 18px;
+            min-width: 96px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .tab-btn:hover {
+            background: var(--paper-2);
+            color: var(--ink);
+        }
+        .tab-btn.active {
+            background: var(--coffee);
+            color: var(--paper);
+            border-color: var(--coffee);
+            box-shadow: 0 6px 16px -6px rgba(44, 36, 25, 0.4);
+        }
+        .tab-btn .tab-icon { font-size: 22px; line-height: 1; }
+        .tab-btn .tab-label {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .tab-btn .tab-tag {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 11px;
+            opacity: 0.7;
+            margin-top: -2px;
+        }
+
+        /* Cards */
+        .paper-card {
+            background: var(--paper);
+            border-radius: 22px;
+            border: 1px solid var(--line);
+        }
+        .soft-card {
+            background: var(--paper-2);
+            border-radius: 16px;
+        }
+
+        /* Tables */
+        .schedule-table { border-collapse: separate; border-spacing: 0; }
+        .schedule-table thead th {
+            background: var(--paper-3);
+            color: var(--coffee-soft);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+        }
+        .schedule-table tbody td {
+            padding: 16px;
+            border-bottom: 1px dashed var(--line);
+            vertical-align: top;
+            font-size: 14px;
+            color: var(--ink);
+        }
+        .schedule-table tbody tr:last-child td { border-bottom: none; }
+        .row-base-1 { background: #F5EBD5; }
+        .row-base-2 { background: #EDE0C2; }
+        .row-base-3 { background: #E5D5B0; }
+        .row-highlight { background: #D6C193; }
+        .row-travel { background: #C9B17F; }
+
+        /* Links */
+        a.lk { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+        a.lk:hover { color: var(--accent-warm); }
+        .pill-link {
+            display: inline-block;
+            background: var(--coffee);
+            color: var(--paper);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-left: 4px;
+            transition: background 0.15s;
+        }
+        .pill-link:hover { background: var(--accent); }
+        .pill-link.warm { background: var(--accent); }
+        .pill-link.warm:hover { background: var(--accent-warm); }
+
+        /* Callouts */
+        .callout {
+            border-radius: 14px;
+            padding: 16px 18px;
+            border-left: 4px solid;
+        }
+        .callout-danger { background: #F3E0D4; border-color: var(--accent); color: var(--coffee-soft); }
+        .callout-warn   { background: #F0E4C8; border-color: #B89048; color: var(--coffee-soft); }
+        .callout-info   { background: var(--paper-2); border-color: var(--ink-soft); color: var(--coffee-soft); }
+
+        /* Section heading */
+        .section-eyebrow {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--ink-soft);
+            letter-spacing: 0.08em;
+            font-size: 14px;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+        }
+
+        /* Nav scrollable on mobile */
+        .tab-scroll {
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .tab-scroll::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen p-4 md:p-8">
+<body class="min-h-screen p-4 md:p-8">
 
-    <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
-        <div class="p-6 md:p-10">
-            <!-- 標題和副標題 -->
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">德國 Challenge Roth + 黑森林 + 法國阿爾薩斯 14天多基地移動遊</h1>
-            <p class="text-center text-gray-600 mt-2">
-                <strong>策略：營地「兩晚一換」，深度探索黑森林 + 阿爾薩斯童話小鎮</strong>
-            </p>
-            <p class="text-center text-gray-500 mt-1 text-sm">
-                14天完整行程：Challenge Roth 鐵人三項 → 德國黑森林自然風光 → 法國阿爾薩斯葡萄酒之路
-            </p>
+    <div class="max-w-6xl mx-auto">
 
-            <!-- Tab Nav (sticky) -->
-            <nav class="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-gray-200 -mx-6 md:-mx-10 px-6 md:px-10 py-3 mt-8 mb-6">
-                <div class="flex flex-wrap gap-2 justify-center">
-                    <button data-tab="itinerary" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">📅 行程</button>
-                    <button data-tab="camping" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">⛺ 露營地</button>
-                    <button data-tab="shopping" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">🛒 採買</button>
-                    <button data-tab="laundry" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">🧺 洗衣</button>
-                    <button data-tab="alsace" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">🇫🇷 景點</button>
-                </div>
-            </nav>
-
-            <!-- ====== Panel: 行程 ====== -->
-            <div id="panel-itinerary" data-tab-panel>
-                <!-- 總覽行程 -->
-                <div>
-                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">行程總覽 (7/2 - 7/15，共14天)</h2>
-                    <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><strong>7/2 (四)</strong> - 台灣出發</li>
-                        <li><strong>7/3 (五)</strong> - 法蘭克福抵達、租車 → Roth</li>
-                        <li><strong>7/4 (六)</strong> - Challenge Roth 報到、輕鬆備賽</li>
-                        <li><strong>7/5 (日)</strong> - <span class="font-bold text-red-600">⭐ Challenge Roth 比賽日 ⭐</span></li>
-                        <li><strong>7/6 (一) - 7/7 (二)</strong> - 基地一：Kirchzarten (黑森林中部，水上樂園、蒂蒂湖)</li>
-                        <li><strong>7/8 (三) - 7/9 (四)</strong> - 基地二：Feldberg / Titisee (黑森林南部/高地)</li>
-                        <li><strong>7/10 (五) - 7/13 (一)</strong> - <span class="font-bold text-purple-600">🇫🇷 基地三：阿爾薩斯 Colmar (法國童話小鎮，4天深度遊)</span></li>
-                        <li><strong>7/14 (二)</strong> - 返回法蘭克福 (約 2.5 小時)、還車、機場</li>
-                        <li><strong>7/15 (三)</strong> - 桃園機場抵達</li>
-                    </ul>
-                </div>
-
-                <!-- 核心行程表 -->
-                <hr class="my-10 border-gray-200">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🏕️ 黑森林 4天 + 阿爾薩斯 4天 核心行程</h2>
-                <div class="mt-4 overflow-x-auto relative rounded-lg border border-gray-200">
-                    <table class="min-w-full divide-y divide-gray-200 align-middle">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">日期</th>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">營地/基地</th>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">上午活動</th>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">下午活動</th>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">晚餐</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <!-- 黑森林基地一：Kirchzarten (夜宿 1/2) -->
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/6 (一)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 1: Kirchzarten</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">Roth → 營地 (2-2.5h)</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">營地入住、熟悉環境、游泳池放鬆</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">營地</td>
-                            </tr>
-                            <!-- 黑森林基地一：Kirchzarten (夜宿 2/2) — 7/7 Badeparadies Galaxy 區關閉，與 7/8 對調 -->
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/7 (二)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 1: Kirchzarten</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><a href="https://www.feldberg-erlebnis.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Feldberg 山區纜車</a>、短步道健行 (從 Kirchzarten 一日來回，約45分車程)</td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><a href="https://www.hochschwarzwald.de/Titisee" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">蒂蒂湖 (Titisee)</a> 湖邊遊樂場</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">湖邊小鎮 / 回營地</td>
-                            </tr>
-                            <!-- 黑森林基地二：Feldberg/Titisee (移動日 + 夜宿 1/2) — 改為 Badeparadies 日 -->
-                            <tr class="bg-green-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/8 (三)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 2: Feldberg/Titisee</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">退營 (Kirchzarten) → <a href="https://www.badeparadies-schwarzwald.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Badeparadies 水上樂園</a> (11-15h，週三 Galaxy 區開放) <a href="https://www.badeparadies-schwarzwald.de/en/shop/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-blue-600 text-white px-2 py-0.5 rounded hover:bg-blue-700">訂票</a></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">前往 Camp 2 Feldberg 入住 (車程約15分)</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">營地烤肉</td>
-                            </tr>
-                            <!-- 黑森林基地二：Feldberg/Titisee (夜宿 2/2) -->
-                            <tr class="bg-green-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/9 (四)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 2: Feldberg/Titisee</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">營地泳池休閒 / <a href="https://www.schluchsee.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Schluchsee</a> 湖畔</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">周邊小鎮輕鬆遊、遊樂場</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">營地餐廳或烤肉</td>
-                            </tr>
-                            <!-- 阿爾薩斯基地三：Colmar (移動日 + 夜宿 1/4) -->
-                            <tr class="bg-purple-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/10 (五)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">退營 (Feldberg) → 前往阿爾薩斯 (約1h)</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">
-                                    <a href="https://www.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">上科尼斯堡城堡</a>
-                                    <a href="https://tickets.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                                    +
-                                    <a href="https://www.montagnedessinges.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">猴山 (Montagne des Singes)</a>
-                                    <a href="https://www.montagnedessinges.com/en/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                                </td>
-                                <td class="px-4 py-4 text-sm text-gray-700">科爾馬小鎮晚餐</td>
-                            </tr>
-                            <!-- 阿爾薩斯基地三：Colmar (夜宿 2/4) -->
-                            <tr class="bg-purple-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/11 (六)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">科爾馬 (Colmar) 小威尼斯、聖馬丁大教堂</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">里博維萊 (Riquewihr) 童話小鎮漫步</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">阿爾薩斯傳統料理</td>
-                            </tr>
-                            <!-- 阿爾薩斯基地三：Colmar (夜宿 3/4) - Eguisheim 法國最美村莊 -->
-                            <tr class="bg-purple-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/12 (日)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">埃居山 (Eguisheim) 法國最美村莊</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">凱塞斯堡 (Kaysersberg) 中世紀古城漫步</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">阿爾薩斯傳統料理</td>
-                            </tr>
-                            <!-- 阿爾薩斯基地三：Colmar (夜宿 4/4) - Europa-Park -->
-                            <tr class="bg-pink-50">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/13 (一)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700" colspan="2">🎢 <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="text-pink-700 underline hover:text-pink-900">Europa-Park 歐洲樂園</a></strong> 一日遊 (車程約45分鐘，歐洲第二大主題樂園，週一票價較划算且人潮較少) <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-pink-600 text-white px-2 py-0.5 rounded hover:bg-pink-700">訂票</a></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">園區內或返回營地</td>
-                            </tr>
-                            <!-- 返回法蘭克福 (移動日) -->
-                            <tr class="bg-amber-100">
-                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/14 (二)</strong></td>
-                                <td class="px-4 py-4 text-sm text-gray-700">返回 Frankfurt</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">退營 (8-9h)</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">開車返回 Frankfurt (約2.5h)、還車</td>
-                                <td class="px-4 py-4 text-sm text-gray-700">法蘭克福機場</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <!-- Header -->
+        <header class="px-2 md:px-4 pt-2 pb-6">
+            <p class="section-eyebrow mb-2">Buon Viaggio · 鐵人三項夏季遊記 · 2026</p>
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+                <h1 class="display-serif text-4xl md:text-5xl text-[color:var(--coffee)]">
+                    <span class="italic">Roth</span>
+                    <span class="font-sans text-3xl md:text-4xl font-bold ml-1 align-baseline">遊記</span>
+                </h1>
+                <div class="text-right">
+                    <p class="section-eyebrow">14 Tage · Deutschland & Alsace</p>
+                    <p class="text-sm text-[color:var(--ink-soft)] mt-1">7/2 (四) — 7/15 (三)</p>
                 </div>
             </div>
+            <p class="mt-4 text-sm md:text-base text-[color:var(--ink-soft)] max-w-3xl">
+                策略：營地「兩晚一換」，深度探索黑森林 + 阿爾薩斯童話小鎮。
+                Challenge Roth 鐵人三項 → 德國黑森林自然風光 → 法國阿爾薩斯葡萄酒之路。
+            </p>
+        </header>
+
+        <!-- Tab Nav (sticky) -->
+        <nav class="sticky top-2 z-20 mb-6">
+            <div class="paper-card shadow-sm px-3 py-3 md:px-4 md:py-3">
+                <div class="tab-scroll flex gap-3 md:justify-center">
+                    <button data-tab="itinerary" class="tab-btn">
+                        <span class="tab-icon">📅</span>
+                        <span class="tab-label">行程</span>
+                        <span class="tab-tag">Tab 1</span>
+                    </button>
+                    <button data-tab="camping" class="tab-btn">
+                        <span class="tab-icon">⛺</span>
+                        <span class="tab-label">露營地</span>
+                        <span class="tab-tag">Tab 2</span>
+                    </button>
+                    <button data-tab="shopping" class="tab-btn">
+                        <span class="tab-icon">🛒</span>
+                        <span class="tab-label">採買</span>
+                        <span class="tab-tag">Tab 3</span>
+                    </button>
+                    <button data-tab="laundry" class="tab-btn">
+                        <span class="tab-icon">🧺</span>
+                        <span class="tab-label">洗衣</span>
+                        <span class="tab-tag">Tab 4</span>
+                    </button>
+                    <button data-tab="alsace" class="tab-btn">
+                        <span class="tab-icon">🇫🇷</span>
+                        <span class="tab-label">景點</span>
+                        <span class="tab-tag">Tab 5</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Card Container -->
+        <main class="paper-card p-6 md:p-10">
+
+            <!-- ====== Panel: 行程 ====== -->
+            <section id="panel-itinerary" data-tab-panel>
+                <p class="section-eyebrow">Itinerario · 完整日程</p>
+                <h2 class="section-title mt-1 mb-6">行程總覽 <span class="font-serif-it italic text-[color:var(--ink-soft)] text-2xl font-normal">(7/2 — 7/15, 14 天)</span></h2>
+
+                <ul class="space-y-2.5 text-[color:var(--ink)]">
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 1 · 7/2 (四)</span><span>台灣出發</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 2 · 7/3 (五)</span><span>法蘭克福抵達、租車 → Roth</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 3 · 7/4 (六)</span><span>Challenge Roth 報到、輕鬆備賽</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 4 · 7/5 (日)</span><span class="font-semibold text-[color:var(--accent)]">⭐ Challenge Roth 比賽日 ⭐</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 5-6 · 7/6-7</span><span>基地一：Kirchzarten (黑森林中部，水上樂園、蒂蒂湖)</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 7-8 · 7/8-9</span><span>基地二：Feldberg / Titisee (黑森林南部高地)</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 9-12 · 7/10-13</span><span class="font-medium">🇫🇷 基地三：阿爾薩斯 Colmar (法國童話小鎮，4 天深度遊)</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 13 · 7/14 (二)</span><span>返回法蘭克福 (約 2.5h)、還車、機場</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 14 · 7/15 (三)</span><span>桃園機場抵達</span></li>
+                </ul>
+
+                <!-- 核心行程表 -->
+                <div class="mt-10">
+                    <p class="section-eyebrow">Programma · 黑森林 + 阿爾薩斯</p>
+                    <h2 class="section-title mt-1 mb-6">🏕️ 核心行程表</h2>
+
+                    <div class="overflow-x-auto rounded-2xl border border-[color:var(--line)]">
+                        <table class="schedule-table min-w-full">
+                            <thead>
+                                <tr>
+                                    <th>日期</th>
+                                    <th>營地 / 基地</th>
+                                    <th>上午活動</th>
+                                    <th>下午活動</th>
+                                    <th>晚餐</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-base-1">
+                                    <td><strong>7/6 (一)</strong></td>
+                                    <td><strong>Camp 1: Kirchzarten</strong></td>
+                                    <td>Roth → 營地 (2-2.5h)</td>
+                                    <td>營地入住、熟悉環境、游泳池放鬆</td>
+                                    <td>營地</td>
+                                </tr>
+                                <tr class="row-base-1">
+                                    <td><strong>7/7 (二)</strong></td>
+                                    <td><strong>Camp 1: Kirchzarten</strong></td>
+                                    <td><a href="https://www.feldberg-erlebnis.de/" target="_blank" rel="noopener noreferrer" class="lk">Feldberg 山區纜車</a>、短步道健行 (從 Kirchzarten 一日來回，約 45 分車程)</td>
+                                    <td><a href="https://www.hochschwarzwald.de/Titisee" target="_blank" rel="noopener noreferrer" class="lk">蒂蒂湖 (Titisee)</a> 湖邊遊樂場</td>
+                                    <td>湖邊小鎮 / 回營地</td>
+                                </tr>
+                                <tr class="row-base-2">
+                                    <td><strong>7/8 (三)</strong></td>
+                                    <td><strong>Camp 2: Feldberg / Titisee</strong></td>
+                                    <td>退營 (Kirchzarten) → <a href="https://www.badeparadies-schwarzwald.de/" target="_blank" rel="noopener noreferrer" class="lk">Badeparadies 水上樂園</a> (11-15h，週三 Galaxy 區開放) <a href="https://www.badeparadies-schwarzwald.de/en/shop/" target="_blank" rel="noopener noreferrer" class="pill-link warm">訂票</a></td>
+                                    <td>前往 Camp 2 Feldberg 入住 (車程約 15 分)</td>
+                                    <td>營地烤肉</td>
+                                </tr>
+                                <tr class="row-base-2">
+                                    <td><strong>7/9 (四)</strong></td>
+                                    <td><strong>Camp 2: Feldberg / Titisee</strong></td>
+                                    <td>營地泳池休閒 / <a href="https://www.schluchsee.de/" target="_blank" rel="noopener noreferrer" class="lk">Schluchsee</a> 湖畔</td>
+                                    <td>周邊小鎮輕鬆遊、遊樂場</td>
+                                    <td>營地餐廳或烤肉</td>
+                                </tr>
+                                <tr class="row-base-3">
+                                    <td><strong>7/10 (五)</strong></td>
+                                    <td><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                    <td>退營 (Feldberg) → 前往阿爾薩斯 (約 1h)</td>
+                                    <td>
+                                        <a href="https://www.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="lk">上科尼斯堡城堡</a>
+                                        <a href="https://tickets.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="pill-link">訂票</a>
+                                        +
+                                        <a href="https://www.montagnedessinges.com/" target="_blank" rel="noopener noreferrer" class="lk">猴山</a>
+                                        <a href="https://www.montagnedessinges.com/en/" target="_blank" rel="noopener noreferrer" class="pill-link">訂票</a>
+                                    </td>
+                                    <td>科爾馬小鎮晚餐</td>
+                                </tr>
+                                <tr class="row-base-3">
+                                    <td><strong>7/11 (六)</strong></td>
+                                    <td><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                    <td>科爾馬 (Colmar) 小威尼斯、聖馬丁大教堂</td>
+                                    <td>里博維萊 (Riquewihr) 童話小鎮漫步</td>
+                                    <td>阿爾薩斯傳統料理</td>
+                                </tr>
+                                <tr class="row-base-3">
+                                    <td><strong>7/12 (日)</strong></td>
+                                    <td><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                    <td>埃居山 (Eguisheim) 法國最美村莊</td>
+                                    <td>凱塞斯堡 (Kaysersberg) 中世紀古城</td>
+                                    <td>阿爾薩斯傳統料理</td>
+                                </tr>
+                                <tr class="row-highlight">
+                                    <td><strong>7/13 (一)</strong></td>
+                                    <td><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                    <td colspan="2">🎢 <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="lk">Europa-Park 歐洲樂園</a></strong> 一日遊 (車程約 45 分鐘，歐洲第二大主題樂園，週一票價較划算且人潮較少) <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="pill-link warm">訂票</a></td>
+                                    <td>園區內或返回營地</td>
+                                </tr>
+                                <tr class="row-travel">
+                                    <td><strong>7/14 (二)</strong></td>
+                                    <td>返回 Frankfurt</td>
+                                    <td>退營 (8-9h)</td>
+                                    <td>開車返回 Frankfurt (約 2.5h)、還車</td>
+                                    <td>法蘭克福機場</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
             <!-- ====== /Panel: 行程 ====== -->
 
             <!-- ====== Panel: 露營 ====== -->
-            <div id="panel-camping" data-tab-panel class="hidden">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">⛺ 露營地建議</h2>
-                <ul class="list-disc list-inside space-y-4 text-gray-700 pl-4">
-                    <li>
-                        <strong class="text-blue-600">基地一 (7/6 - 7/8)：<a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-800">Camping Kirchzarten</a> 🇩🇪</strong>
-                        <a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="ml-2 inline-block text-xs bg-blue-600 text-white px-2 py-0.5 rounded hover:bg-blue-700">官網訂房</a>
-                        <p class="text-sm ml-4 mt-1">地理位置極佳，設施完善，擁有自己的戶外泳池。靠近 Badeparadies 及蒂蒂湖。</p>
-                    </li>
-                    <li>
-                        <strong class="text-green-600">基地二 (7/8 - 7/10)：<a href="https://www.camping-bankenhof.de/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800">Camping Bankenhof</a> 或 <a href="https://www.camping-sandbank.de/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800">Camping Sandbank (Titisee)</a> 🇩🇪</strong>
-                        <a href="https://www.camping-bankenhof.de/" target="_blank" rel="noopener noreferrer" class="ml-2 inline-block text-xs bg-green-600 text-white px-2 py-0.5 rounded hover:bg-green-700">Bankenhof 訂房</a>
-                        <a href="https://www.camping-sandbank.de/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-green-600 text-white px-2 py-0.5 rounded hover:bg-green-700">Sandbank 訂房</a>
-                        <p class="text-sm ml-4 mt-1">靠近 Feldberg (黑森林最高峰) 及蒂蒂湖，方便進行高山健行和湖畔活動，設施多為親子取向。</p>
-                    </li>
-                    <li>
-                        <strong class="text-purple-600">基地三 (7/10 - 7/14)：<a href="https://www.campingdelill.fr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-purple-800">Camping de l'Ill</a> 或 <a href="https://www.camping-turckheim.fr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-purple-800">Camping Le Médiéval</a> 🇫🇷</strong>
-                        <a href="https://www.campingdelill.fr/" target="_blank" rel="noopener noreferrer" class="ml-2 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">de l'Ill 訂房</a>
-                        <a href="https://www.camping-turckheim.fr/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">Médiéval 訂房</a>
-                        <p class="text-sm ml-4 mt-1">
-                            <strong>Camping de l'Ill：</strong> 距科爾馬市中心僅2公里，沿河而建，環境優美，€15起/晚。<br>
-                            <strong>Camping Le Médiéval (Turckheim)：</strong> 距科爾馬約6公里，位於葡萄酒之路上，有兒童遊樂設施及兒童俱樂部。<br>
-                            <span class="text-purple-600">★ 阿爾薩斯停留4晚，可深度遊覽童話小鎮及 Europa-Park</span>
-                        </p>
-                    </li>
-                </ul>
-            </div>
+            <section id="panel-camping" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Campeggio · 三座基地</p>
+                <h2 class="section-title mt-1 mb-6">⛺ 露營地建議</h2>
+
+                <div class="space-y-5">
+                    <div class="soft-card p-5" style="background: var(--paper-2);">
+                        <div class="flex items-center gap-3 flex-wrap mb-2">
+                            <span class="font-serif-it italic text-[color:var(--ink-soft)]">Base 1 · 7/6 — 7/8</span>
+                            <h3 class="text-lg font-semibold text-[color:var(--coffee)]">
+                                <a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">Camping Kirchzarten</a>
+                                <span class="text-sm text-[color:var(--ink-soft)] font-normal">🇩🇪</span>
+                            </h3>
+                            <a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="pill-link">官網訂房</a>
+                        </div>
+                        <p class="text-sm text-[color:var(--ink-soft)] leading-relaxed">地理位置極佳，設施完善，擁有自己的戶外泳池。靠近 Badeparadies 及蒂蒂湖。</p>
+                    </div>
+
+                    <div class="soft-card p-5" style="background: var(--paper-3);">
+                        <div class="flex items-center gap-3 flex-wrap mb-2">
+                            <span class="font-serif-it italic text-[color:var(--ink-soft)]">Base 2 · 7/8 — 7/10</span>
+                            <h3 class="text-lg font-semibold text-[color:var(--coffee)]">
+                                <a href="https://www.camping-bankenhof.de/" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">Camping Bankenhof</a>
+                                <span class="text-[color:var(--ink-soft)]">/</span>
+                                <a href="https://www.camping-sandbank.de/" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">Camping Sandbank (Titisee)</a>
+                                <span class="text-sm text-[color:var(--ink-soft)] font-normal">🇩🇪</span>
+                            </h3>
+                            <a href="https://www.camping-bankenhof.de/" target="_blank" rel="noopener noreferrer" class="pill-link">Bankenhof 訂房</a>
+                            <a href="https://www.camping-sandbank.de/" target="_blank" rel="noopener noreferrer" class="pill-link">Sandbank 訂房</a>
+                        </div>
+                        <p class="text-sm text-[color:var(--ink-soft)] leading-relaxed">靠近 Feldberg (黑森林最高峰) 及蒂蒂湖，方便進行高山健行和湖畔活動，設施多為親子取向。</p>
+                    </div>
+
+                    <div class="soft-card p-5" style="background: var(--paper-4);">
+                        <div class="flex items-center gap-3 flex-wrap mb-2">
+                            <span class="font-serif-it italic text-[color:var(--coffee-soft)]">Base 3 · 7/10 — 7/14</span>
+                            <h3 class="text-lg font-semibold text-[color:var(--coffee)]">
+                                <a href="https://www.campingdelill.fr/" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">Camping de l'Ill</a>
+                                <span class="text-[color:var(--ink-soft)]">/</span>
+                                <a href="https://www.camping-turckheim.fr/" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">Camping Le Médiéval</a>
+                                <span class="text-sm text-[color:var(--ink-soft)] font-normal">🇫🇷</span>
+                            </h3>
+                            <a href="https://www.campingdelill.fr/" target="_blank" rel="noopener noreferrer" class="pill-link">de l'Ill 訂房</a>
+                            <a href="https://www.camping-turckheim.fr/" target="_blank" rel="noopener noreferrer" class="pill-link">Médiéval 訂房</a>
+                        </div>
+                        <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-1">
+                            <p><strong>Camping de l'Ill：</strong>距科爾馬市中心僅 2 公里，沿河而建，環境優美，€15 起/晚。</p>
+                            <p><strong>Camping Le Médiéval (Turckheim)：</strong>距科爾馬約 6 公里，位於葡萄酒之路上，有兒童遊樂設施及兒童俱樂部。</p>
+                            <p class="italic font-serif-it text-[color:var(--accent)]">★ 阿爾薩斯停留 4 晚，可深度遊覽童話小鎮及 Europa-Park</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- ====== /Panel: 露營 ====== -->
 
             <!-- ====== Panel: 採買 ====== -->
-            <div id="panel-shopping" data-tab-panel class="hidden">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🛒 採買攻略 (Roth 賽前補給)</h2>
+            <section id="panel-shopping" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Provviste · Roth 賽前補給</p>
+                <h2 class="section-title mt-1 mb-6">🛒 採買攻略</h2>
 
-                <!-- 重點提示 -->
-                <div class="mb-6 bg-red-50 border-l-4 border-red-500 rounded-r-lg p-4">
-                    <p class="text-sm text-gray-900 leading-relaxed">
-                        <strong class="text-red-700">關鍵原則：</strong>
-                        <span class="block mt-1">⚠️ <strong>7/3 (五)</strong> 一定要買齊，<strong>7/4 (六)</strong> 只能補缺，<strong>7/5 (日)</strong> 週日不要期待超市有開！</span>
+                <div class="callout callout-danger mb-6">
+                    <p class="text-sm leading-relaxed">
+                        <strong class="text-[color:var(--accent)]">關鍵原則</strong><br>
+                        ⚠️ <strong>7/3 (五)</strong> 一定要買齊，<strong>7/4 (六)</strong> 只能補缺，<strong>7/5 (日)</strong> 週日不要期待超市有開！
                     </p>
                 </div>
 
-                <!-- 首選：Kaufland Roth -->
-                <div class="mb-6 bg-blue-50 rounded-lg p-5 border-2 border-blue-300">
-                    <h3 class="font-bold text-blue-900 mb-2 text-lg">⭐ 首選：Kaufland Roth 一次買足</h3>
-                    <div class="text-sm text-gray-800 space-y-1">
-                        <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Kaufland+Roth+Friedrich-Wambsganz-Stra%C3%9Fe+1" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Friedrich-Wambsganz-Straße 1, 91154 Roth</a></p>
-                        <p>🕐 <strong>週五 07:00 - 20:00</strong></p>
-                        <p class="mt-2">買到可以撐到 <strong>7/6 早上</strong> 離開 Roth/賽事營地。<strong class="text-red-700">不要在法蘭克福機場大買</strong>，除非飛機延誤到 Roth 超市快關門。</p>
+                <!-- Kaufland -->
+                <div class="soft-card p-5 md:p-6 mb-6" style="background: var(--paper-3); border: 1px solid var(--paper-5);">
+                    <p class="section-eyebrow mb-1">Primario · 首選</p>
+                    <h3 class="text-xl font-semibold text-[color:var(--coffee)] mb-3">⭐ Kaufland Roth 一次買足</h3>
+                    <div class="text-sm text-[color:var(--coffee-soft)] space-y-1.5">
+                        <p>📍 <a href="https://www.google.com/maps/search/?api=1&query=Kaufland+Roth+Friedrich-Wambsganz-Stra%C3%9Fe+1" target="_blank" rel="noopener noreferrer" class="lk">Friedrich-Wambsganz-Straße 1, 91154 Roth</a></p>
+                        <p>🕐 <strong>週五 07:00 — 20:00</strong></p>
+                        <p class="mt-2">買到可以撐到 <strong>7/6 早上</strong> 離開 Roth/賽事營地。<strong class="text-[color:var(--accent)]">不要在法蘭克福機場大買</strong>，除非飛機延誤到 Roth 超市快關門。</p>
                     </div>
                 </div>
 
-                <!-- 同一趟補給 -->
-                <h3 class="font-bold text-gray-900 mb-3">🚗 同一趟順道補：</h3>
+                <!-- 同行補給 -->
+                <p class="section-eyebrow mb-1">In Cammino · 同一趟順道補</p>
+                <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-3">🚗 同行補給點</h3>
                 <div class="grid md:grid-cols-2 gap-4 mb-6">
-                    <div class="bg-orange-50 rounded-lg p-4">
-                        <h4 class="font-bold text-orange-800 mb-2">
-                            <a href="https://www.google.com/maps/search/?api=1&query=dm+drogerie+Roth" target="_blank" rel="noopener noreferrer" class="underline hover:text-orange-900">dm Roth (藥妝)</a>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">
+                            <a href="https://www.google.com/maps/search/?api=1&query=dm+drogerie+Roth" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">dm Roth (藥妝)</a>
                         </h4>
-                        <p class="text-sm text-gray-700">防曬、濕紙巾、藥妝、<strong>洗衣膠囊</strong>、兒童用品。</p>
+                        <p class="text-sm text-[color:var(--ink-soft)]">防曬、濕紙巾、藥妝、<strong class="text-[color:var(--ink)]">洗衣膠囊</strong>、兒童用品。</p>
                     </div>
-                    <div class="bg-yellow-50 rounded-lg p-4">
-                        <h4 class="font-bold text-yellow-800 mb-2">
-                            <a href="https://www.google.com/maps/search/?api=1&query=OBI+Roth" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-900">OBI Roth (五金/露營用品)</a>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">
+                            <a href="https://www.google.com/maps/search/?api=1&query=OBI+Roth" target="_blank" rel="noopener noreferrer" class="lk no-underline hover:underline">OBI Roth (五金 / 露營)</a>
                         </h4>
-                        <p class="text-sm text-gray-700">露營車用品、瓦斯罐/露營耗材、延長線或轉接頭、垃圾袋、清潔用品。租車公司通常會給基本配備，但缺東西時 OBI 最好補。</p>
+                        <p class="text-sm text-[color:var(--ink-soft)]">露營車用品、瓦斯罐 / 露營耗材、延長線或轉接頭、垃圾袋、清潔用品。租車公司通常會給基本配備，但缺東西時 OBI 最好補。</p>
                     </div>
                 </div>
 
                 <!-- 備案 -->
-                <div class="mb-6 bg-gray-50 rounded-lg p-4 border-l-4 border-gray-400">
-                    <h3 class="font-bold text-gray-800 mb-2">🆘 如果到 Roth 已經太晚：</h3>
-                    <p class="text-sm text-gray-700">
-                        先去 <a href="https://www.google.com/maps/search/?api=1&query=REWE+Frankfurt+Airport+The+Squaire" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">REWE Frankfurt Airport / The Squaire</a> 買當晚基本食物，它開到 <strong>23:00</strong>。隔天 7/4 再去 Kaufland Roth 補完整。
+                <div class="callout callout-info mb-6">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Piano B · 備案</p>
+                    <p class="font-semibold text-[color:var(--coffee)] mb-2">🆘 如果到 Roth 已經太晚</p>
+                    <p class="text-sm text-[color:var(--coffee-soft)]">
+                        先去 <a href="https://www.google.com/maps/search/?api=1&query=REWE+Frankfurt+Airport+The+Squaire" target="_blank" rel="noopener noreferrer" class="lk">REWE Frankfurt Airport / The Squaire</a> 買當晚基本食物，它開到 <strong>23:00</strong>。隔天 7/4 再去 Kaufland Roth 補完整。
                     </p>
                 </div>
 
-                <!-- 採買清單 (2大2小) -->
-                <h3 class="font-bold text-gray-900 mb-3">📋 建議採買量 (2大2小撐到比賽後)</h3>
+                <!-- 採買清單 -->
+                <p class="section-eyebrow mb-1">Lista · 建議採買量 (2 大 2 小)</p>
+                <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-4">📋 撐到比賽後的份量</h3>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="bg-blue-50 rounded-lg p-4">
-                        <h4 class="font-bold text-blue-800 mb-2">💧 水</h4>
-                        <p class="text-sm text-gray-700">至少 <strong>12 瓶 1.5L</strong>，夏天比賽週末建議 <strong>18L 以上</strong></p>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">💧 水</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">至少 <strong class="text-[color:var(--ink)]">12 瓶 1.5L</strong>，夏天比賽週末建議 <strong class="text-[color:var(--ink)]">18L 以上</strong></p>
                     </div>
-                    <div class="bg-amber-50 rounded-lg p-4">
-                        <h4 class="font-bold text-amber-800 mb-2">🥐 早餐</h4>
-                        <p class="text-sm text-gray-700">吐司/麵包、牛奶、優格、麥片、蛋、果醬、香蕉</p>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">🥐 早餐</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">吐司 / 麵包、牛奶、優格、麥片、蛋、果醬、香蕉</p>
                     </div>
-                    <div class="bg-green-50 rounded-lg p-4">
-                        <h4 class="font-bold text-green-800 mb-2">🍝 正餐</h4>
-                        <p class="text-sm text-gray-700">義大利麵、醬料、米/即食飯、香腸、雞肉/絞肉、起司、火腿、沙拉菜、番茄、小黃瓜</p>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">🍝 正餐</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">義大利麵、醬料、米 / 即食飯、香腸、雞肉 / 絞肉、起司、火腿、沙拉菜、番茄、小黃瓜</p>
                     </div>
-                    <div class="bg-red-50 rounded-lg p-4">
-                        <h4 class="font-bold text-red-800 mb-2">🏆 比賽日 (7/5)</h4>
-                        <p class="text-sm text-gray-700">香蕉、白吐司、蜂蜜/果醬、能量飲、可樂、<strong>鹽錠/電解質</strong>、孩子零食</p>
+                    <div class="soft-card p-4" style="background: var(--paper-3);">
+                        <h4 class="font-semibold text-[color:var(--accent)] mb-2">🏆 比賽日 (7/5)</h4>
+                        <p class="text-sm text-[color:var(--coffee-soft)]">香蕉、白吐司、蜂蜜 / 果醬、能量飲、可樂、<strong>鹽錠 / 電解質</strong>、孩子零食</p>
                     </div>
-                    <div class="bg-purple-50 rounded-lg p-4">
-                        <h4 class="font-bold text-purple-800 mb-2">🚐 露營車用品</h4>
-                        <p class="text-sm text-gray-700">垃圾袋、廚房紙巾、洗碗精、海綿、濕紙巾、衛生紙、洗手乳</p>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">🚐 露營車用品</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">垃圾袋、廚房紙巾、洗碗精、海綿、濕紙巾、衛生紙、洗手乳</p>
                     </div>
-                    <div class="bg-pink-50 rounded-lg p-4">
-                        <h4 class="font-bold text-pink-800 mb-2">👶 小孩</h4>
-                        <p class="text-sm text-gray-700">果泥/點心、果汁、水果、簡單餅乾</p>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">👶 小孩</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">果泥 / 點心、果汁、水果、簡單餅乾</p>
                     </div>
                 </div>
 
                 <!-- 動線提示 -->
-                <div class="mt-6 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg p-4">
-                    <p class="text-sm text-gray-800">
-                        💡 <strong>動線提醒：</strong>如果營地是 <strong>Heuberg / Rothsee</strong> 附近，<strong class="text-blue-700">Kaufland Roth 買完再進營地最穩</strong>（避免抵營後又繞出來）。
+                <div class="callout callout-warn mt-6">
+                    <p class="text-sm text-[color:var(--coffee-soft)]">
+                        💡 <strong>動線提醒：</strong>如果營地是 <strong>Heuberg / Rothsee</strong> 附近，<strong class="text-[color:var(--accent)]">Kaufland Roth 買完再進營地最穩</strong>（避免抵營後又繞出來）。
                     </p>
                 </div>
-            </div>
+            </section>
             <!-- ====== /Panel: 採買 ====== -->
 
             <!-- ====== Panel: 洗衣 ====== -->
-            <div id="panel-laundry" data-tab-panel class="hidden">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🧺 洗衣攻略 (各營地洗衣設施)</h2>
-                <div class="overflow-x-auto rounded-lg border border-gray-200">
-                    <table class="min-w-full divide-y divide-gray-200 text-sm">
-                        <thead class="bg-gray-50">
+            <section id="panel-laundry" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Lavanderia · 各營地洗衣設施</p>
+                <h2 class="section-title mt-1 mb-6">🧺 洗衣攻略</h2>
+
+                <div class="overflow-x-auto rounded-2xl border border-[color:var(--line)]">
+                    <table class="schedule-table min-w-full">
+                        <thead>
                             <tr>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">行程營地</th>
-                                <th scope="col" class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wider">洗衣機</th>
-                                <th scope="col" class="px-4 py-3 text-center text-xs font-semibold text-gray-500 uppercase tracking-wider">烘衣機</th>
-                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">備註</th>
+                                <th>行程營地</th>
+                                <th class="text-center">洗衣機</th>
+                                <th class="text-center">烘衣機</th>
+                                <th>備註</th>
                             </tr>
                         </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <tr class="bg-red-50">
-                                <td class="px-4 py-3 font-medium text-gray-900">Roth 賽事官方營地</td>
-                                <td class="px-4 py-3 text-center text-amber-700 font-medium">未確認</td>
-                                <td class="px-4 py-3 text-center text-amber-700 font-medium">未確認</td>
-                                <td class="px-4 py-3 text-gray-700">官方露營頁和地圖只看到淋浴/廁所，沒列洗衣烘衣。<strong class="text-red-700">不要把洗衣排在 Roth。</strong></td>
+                        <tbody>
+                            <tr class="row-highlight">
+                                <td><strong>Roth 賽事官方營地</strong></td>
+                                <td class="text-center font-medium text-[color:var(--accent)]">未確認</td>
+                                <td class="text-center font-medium text-[color:var(--accent)]">未確認</td>
+                                <td>官方露營頁和地圖只看到淋浴 / 廁所，沒列洗衣烘衣。<strong class="text-[color:var(--accent)]">不要把洗衣排在 Roth。</strong></td>
                             </tr>
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-3 font-medium text-gray-900"><a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Camping Kirchzarten</a></td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-gray-700">3 棟衛浴樓都有洗衣機、烘衣機；代幣 <strong>EUR 4</strong>，一枚可洗一次或烘一次。</td>
+                            <tr class="row-base-1">
+                                <td><a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="lk">Camping Kirchzarten</a></td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td>3 棟衛浴樓都有洗衣機、烘衣機；代幣 <strong>EUR 4</strong>，一枚可洗一次或烘一次。</td>
                             </tr>
-                            <tr class="bg-green-50">
-                                <td class="px-4 py-3 font-medium text-gray-900"><a href="https://www.camping-bankenhof.de/" target="_blank" rel="noopener noreferrer" class="text-green-700 underline hover:text-green-900">Camping Bankenhof</a></td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-gray-700">主建築內有 washing machines / dryers。</td>
+                            <tr class="row-base-2">
+                                <td><a href="https://www.camping-bankenhof.de/" target="_blank" rel="noopener noreferrer" class="lk">Camping Bankenhof</a></td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td>主建築內有 washing machines / dryers。</td>
                             </tr>
-                            <tr class="bg-green-50">
-                                <td class="px-4 py-3 font-medium text-gray-900"><a href="https://www.camping-sandbank.de/" target="_blank" rel="noopener noreferrer" class="text-green-700 underline hover:text-green-900">Camping Sandbank (Titisee)</a></td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-gray-700">衛浴頁寫明有洗衣機、烘衣機、脫水機、熨燙設備。</td>
+                            <tr class="row-base-2">
+                                <td><a href="https://www.camping-sandbank.de/" target="_blank" rel="noopener noreferrer" class="lk">Camping Sandbank (Titisee)</a></td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td>衛浴頁寫明有洗衣機、烘衣機、脫水機、熨燙設備。</td>
                             </tr>
-                            <tr class="bg-purple-50">
-                                <td class="px-4 py-3 font-medium text-gray-900"><a href="https://www.campingdelill.fr/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Camping de l'Ill (Colmar)</a></td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-gray-700">服務頁寫有 laundry area with washing machine and tumble dryer。</td>
+                            <tr class="row-base-3">
+                                <td><a href="https://www.campingdelill.fr/" target="_blank" rel="noopener noreferrer" class="lk">Camping de l'Ill (Colmar)</a></td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td>服務頁寫有 laundry area with washing machine and tumble dryer。</td>
                             </tr>
-                            <tr class="bg-purple-50">
-                                <td class="px-4 py-3 font-medium text-gray-900"><a href="https://www.camping-turckheim.fr/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">Camping Le Médiéval (Turckheim)</a></td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-center text-green-700 font-bold">✓ 有</td>
-                                <td class="px-4 py-3 text-gray-700">營地服務列 laundry room / washing machine &amp; dryer。</td>
+                            <tr class="row-base-3">
+                                <td><a href="https://www.camping-turckheim.fr/" target="_blank" rel="noopener noreferrer" class="lk">Camping Le Médiéval (Turckheim)</a></td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td class="text-center font-semibold text-[color:var(--coffee)]">✓ 有</td>
+                                <td>營地服務列 laundry room / washing machine &amp; dryer。</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <!-- 洗衣建議 -->
-                <div class="mt-6 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg p-4">
-                    <h3 class="font-bold text-yellow-900 mb-2">💡 洗衣建議</h3>
-                    <p class="text-sm text-gray-800 leading-relaxed">
-                        Roth 比賽日後衣物會最多，<strong class="text-red-700">不要期待賽事營地能洗</strong>。
-                        最穩的洗衣時機：
+                <div class="callout callout-warn mt-6">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Consiglio · 建議</p>
+                    <h3 class="font-semibold text-[color:var(--coffee)] mb-2">💡 洗衣時機</h3>
+                    <p class="text-sm text-[color:var(--coffee-soft)] leading-relaxed">
+                        Roth 比賽日後衣物會最多，<strong class="text-[color:var(--accent)]">不要期待賽事營地能洗</strong>。最穩的洗衣時機：
                     </p>
-                    <ul class="list-disc list-inside text-sm text-gray-800 mt-2 space-y-1">
+                    <ul class="list-disc list-inside text-sm text-[color:var(--coffee-soft)] mt-2 space-y-1">
                         <li><strong>首要：7/6 或 7/7 抵達 Camping Kirchzarten 後立刻洗</strong>（賽後第一晚，量最大）</li>
                         <li><strong>次要：7/8-7/10 Bankenhof 或 Sandbank</strong>（中段補洗）</li>
                         <li><strong>備援：7/10-7/14 Colmar 兩個營地都可</strong>（最後階段補洗）</li>
                     </ul>
-                    <p class="text-sm text-gray-800 mt-3">
+                    <p class="text-sm text-[color:var(--coffee-soft)] mt-3">
                         🧴 <strong>建議攜帶幾顆洗衣膠囊</strong>比較保險（營地通常不提供洗衣精，現場販售也不一定有貨）。
                     </p>
                 </div>
-            </div>
+            </section>
             <!-- ====== /Panel: 洗衣 ====== -->
 
             <!-- ====== Panel: 景點 ====== -->
-            <div id="panel-alsace" data-tab-panel class="hidden">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🇫🇷 阿爾薩斯 (Alsace) 景點介紹</h2>
+            <section id="panel-alsace" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Alsazia · 阿爾薩斯精選</p>
+                <h2 class="section-title mt-1 mb-6">🇫🇷 阿爾薩斯景點介紹</h2>
 
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- 童話小鎮 -->
-                    <div class="bg-purple-50 rounded-lg p-4">
-                        <h3 class="font-bold text-purple-800 mb-3">🏘️ 童話小鎮 (葡萄酒之路)</h3>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li><strong>科爾馬 (Colmar)</strong> - 「小威尼斯」，宮崎駿《霍爾的移動城堡》原型城市</li>
-                            <li><strong>里博維萊 (Riquewihr)</strong> - 迪士尼《美女與野獸》場景靈感來源</li>
-                            <li><strong>埃居山 (Eguisheim)</strong> - 法國「最美村莊」，葡萄酒發源地</li>
-                            <li><strong>凱塞斯堡 (Kaysersberg)</strong> - 中世紀古城，聖誕市集聞名</li>
+                <div class="grid md:grid-cols-2 gap-5">
+                    <div class="soft-card p-5" style="background: var(--paper-3);">
+                        <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Borghi · 童話小鎮</p>
+                        <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-3">🏘️ 葡萄酒之路</h3>
+                        <ul class="space-y-2 text-sm text-[color:var(--coffee-soft)]">
+                            <li><strong class="text-[color:var(--coffee)]">科爾馬 (Colmar)</strong> — 「小威尼斯」，宮崎駿《霍爾的移動城堡》原型城市</li>
+                            <li><strong class="text-[color:var(--coffee)]">里博維萊 (Riquewihr)</strong> — 迪士尼《美女與野獸》場景靈感來源</li>
+                            <li><strong class="text-[color:var(--coffee)]">埃居山 (Eguisheim)</strong> — 法國「最美村莊」，葡萄酒發源地</li>
+                            <li><strong class="text-[color:var(--coffee)]">凱塞斯堡 (Kaysersberg)</strong> — 中世紀古城，聖誕市集聞名</li>
                         </ul>
                     </div>
 
-                    <!-- 親子景點 -->
-                    <div class="bg-pink-50 rounded-lg p-4">
-                        <h3 class="font-bold text-pink-800 mb-3">👨‍👩‍👧‍👦 親子必訪景點</h3>
-                        <ul class="space-y-2 text-sm text-gray-700">
+                    <div class="soft-card p-5" style="background: var(--paper-4);">
+                        <p class="font-serif-it italic text-sm text-[color:var(--coffee-soft)] mb-1">Famiglia · 親子必訪</p>
+                        <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-3">👨‍👩‍👧‍👦 親子景點</h3>
+                        <ul class="space-y-3 text-sm text-[color:var(--coffee-soft)]">
                             <li>
-                                <strong><a href="https://www.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">上科尼斯堡城堡 (Haut-Koenigsbourg)</a></strong>
-                                <a href="https://tickets.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                                - 12世紀城堡，距科爾馬26km，景色壯觀
+                                <strong><a href="https://www.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="lk">上科尼斯堡城堡 (Haut-Koenigsbourg)</a></strong>
+                                <a href="https://tickets.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="pill-link">訂票</a>
+                                <br><span class="text-xs">12 世紀城堡，距科爾馬 26km，景色壯觀</span>
                             </li>
                             <li>
-                                <strong><a href="https://www.montagnedessinges.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">猴山 (Montagne des Singes)</a></strong>
-                                <a href="https://www.montagnedessinges.com/en/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                                - 200多隻獼猴自由活動，€12/大人、€8/兒童
+                                <strong><a href="https://www.montagnedessinges.com/" target="_blank" rel="noopener noreferrer" class="lk">猴山 (Montagne des Singes)</a></strong>
+                                <a href="https://www.montagnedessinges.com/en/" target="_blank" rel="noopener noreferrer" class="pill-link">訂票</a>
+                                <br><span class="text-xs">200 多隻獼猴自由活動，€12/大人、€8/兒童</span>
                             </li>
                             <li>
-                                <strong><a href="https://www.voleriedesaigles.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">老鷹公園 (Volerie des Aigles)</a></strong>
-                                <a href="https://www.voleriedesaigles.com/billetterie/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                                - 猛禽飛行表演，與城堡、猴山相鄰
+                                <strong><a href="https://www.voleriedesaigles.com/" target="_blank" rel="noopener noreferrer" class="lk">老鷹公園 (Volerie des Aigles)</a></strong>
+                                <a href="https://www.voleriedesaigles.com/billetterie/" target="_blank" rel="noopener noreferrer" class="pill-link">訂票</a>
+                                <br><span class="text-xs">猛禽飛行表演，與城堡、猴山相鄰</span>
                             </li>
                             <li>
-                                <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="text-pink-700 underline hover:text-pink-900">歐洲樂園 (Europa-Park)</a></strong>
-                                <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-pink-600 text-white px-2 py-0.5 rounded hover:bg-pink-700">訂票</a>
-                                - 歐洲第二大主題樂園 (德法邊境，車程45分鐘)
+                                <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="lk">歐洲樂園 (Europa-Park)</a></strong>
+                                <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="pill-link warm">訂票</a>
+                                <br><span class="text-xs">歐洲第二大主題樂園 (德法邊境，車程 45 分鐘)</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- 美食推薦 -->
-                <div class="mt-6 bg-amber-50 rounded-lg p-4">
-                    <h3 class="font-bold text-amber-800 mb-3">🍽️ 阿爾薩斯必嚐美食</h3>
-                    <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-700">
-                        <div><strong>Flammekueche</strong> - 阿爾薩斯薄餅 (洋蔥奶油培根)</div>
-                        <div><strong>Choucroute</strong> - 酸菜香腸豬肉拼盤</div>
-                        <div><strong>Kougelhopf</strong> - 傳統皇冠蛋糕</div>
-                        <div><strong>Bretzel</strong> - 德式蝴蝶脆餅</div>
-                        <div><strong>Gewurztraminer</strong> - 阿爾薩斯白葡萄酒</div>
-                        <div><strong>Munster</strong> - 當地特色起司</div>
+                <div class="soft-card p-5 mt-5" style="background: var(--paper-2);">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Gastronomia · 必嚐美食</p>
+                    <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-3">🍽️ 阿爾薩斯傳統菜</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-[color:var(--coffee-soft)]">
+                        <div><strong class="text-[color:var(--coffee)] font-serif-it italic block">Flammekueche</strong>阿爾薩斯薄餅 (洋蔥奶油培根)</div>
+                        <div><strong class="text-[color:var(--coffee)] font-serif-it italic block">Choucroute</strong>酸菜香腸豬肉拼盤</div>
+                        <div><strong class="text-[color:var(--coffee)] font-serif-it italic block">Kougelhopf</strong>傳統皇冠蛋糕</div>
+                        <div><strong class="text-[color:var(--coffee)] font-serif-it italic block">Bretzel</strong>德式蝴蝶脆餅</div>
+                        <div><strong class="text-[color:var(--coffee)] font-serif-it italic block">Gewurztraminer</strong>阿爾薩斯白葡萄酒</div>
+                        <div><strong class="text-[color:var(--coffee)] font-serif-it italic block">Munster</strong>當地特色起司</div>
                     </div>
                 </div>
-            </div>
+            </section>
             <!-- ====== /Panel: 景點 ====== -->
 
-        </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 px-4">
+            <p class="font-serif-it italic text-sm text-[color:var(--ink-faint)]">Buon Viaggio · Auf Wiedersehen · Bon Voyage</p>
+            <p class="text-xs text-[color:var(--ink-faint)] mt-1">Roth 2026 · Schwarzwald · Alsace</p>
+        </footer>
+
     </div>
 
     <script>
@@ -411,21 +631,12 @@
 
             function setActive(name) {
                 tabs.forEach(btn => {
-                    const isActive = btn.dataset.tab === name;
-                    btn.classList.toggle('bg-blue-600', isActive);
-                    btn.classList.toggle('text-white', isActive);
-                    btn.classList.toggle('border-blue-600', isActive);
-                    btn.classList.toggle('shadow-sm', isActive);
-                    btn.classList.toggle('bg-white', !isActive);
-                    btn.classList.toggle('text-gray-700', !isActive);
-                    btn.classList.toggle('border-gray-300', !isActive);
-                    btn.classList.toggle('hover:bg-gray-50', !isActive);
+                    btn.classList.toggle('active', btn.dataset.tab === name);
                 });
                 panels.forEach(p => {
                     p.classList.toggle('hidden', p.id !== 'panel-' + name);
                 });
-                // 切換時將視窗滾到 tab 列上方一點點，避免內容被 sticky 遮住
-                if (window.scrollY > 80) {
+                if (window.scrollY > 120) {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             }
@@ -439,7 +650,6 @@
                 });
             });
 
-            // 支援 URL hash 直接開啟對應 tab，例如 #shopping
             const initial = (location.hash || '#itinerary').slice(1);
             const valid = Array.from(tabs).some(b => b.dataset.tab === initial);
             setActive(valid ? initial : 'itinerary');
