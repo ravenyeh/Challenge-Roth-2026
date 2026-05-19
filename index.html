@@ -28,122 +28,136 @@
                 14天完整行程：Challenge Roth 鐵人三項 → 德國黑森林自然風光 → 法國阿爾薩斯葡萄酒之路
             </p>
 
-            <!-- 總覽行程 -->
-            <div class="mt-10">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">行程總覽 (7/2 - 7/15，共14天)</h2>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li><strong>7/2 (四)</strong> - 台灣出發</li>
-                    <li><strong>7/3 (五)</strong> - 法蘭克福抵達、租車 → Roth</li>
-                    <li><strong>7/4 (六)</strong> - Challenge Roth 報到、輕鬆備賽</li>
-                    <li><strong>7/5 (日)</strong> - <span class="font-bold text-red-600">⭐ Challenge Roth 比賽日 ⭐</span></li>
-                    <li><strong>7/6 (一) - 7/7 (二)</strong> - 基地一：Kirchzarten (黑森林中部，水上樂園、蒂蒂湖)</li>
-                    <li><strong>7/8 (三) - 7/9 (四)</strong> - 基地二：Feldberg / Titisee (黑森林南部/高地)</li>
-                    <li><strong>7/10 (五) - 7/13 (一)</strong> - <span class="font-bold text-purple-600">🇫🇷 基地三：阿爾薩斯 Colmar (法國童話小鎮，4天深度遊)</span></li>
-                    <li><strong>7/14 (二)</strong> - 返回法蘭克福 (約 2.5 小時)、還車、機場</li>
-                    <li><strong>7/15 (三)</strong> - 桃園機場抵達</li>
-                </ul>
-            </div>
+            <!-- Tab Nav (sticky) -->
+            <nav class="sticky top-0 z-20 bg-white/95 backdrop-blur border-b border-gray-200 -mx-6 md:-mx-10 px-6 md:px-10 py-3 mt-8 mb-6">
+                <div class="flex flex-wrap gap-2 justify-center">
+                    <button data-tab="itinerary" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">📅 行程</button>
+                    <button data-tab="camping" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">⛺ 露營地</button>
+                    <button data-tab="shopping" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">🛒 採買</button>
+                    <button data-tab="laundry" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">🧺 洗衣</button>
+                    <button data-tab="alsace" class="px-4 py-2 rounded-lg font-medium text-sm border transition whitespace-nowrap">🇫🇷 景點</button>
+                </div>
+            </nav>
 
-            <!-- 核心行程表 -->
-            <hr class="my-10 border-gray-200">
-            <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🏕️ 黑森林 4天 + 阿爾薩斯 4天 核心行程</h2>
-            <div class="mt-4 overflow-x-auto relative rounded-lg border border-gray-200">
-                <table class="min-w-full divide-y divide-gray-200 align-middle">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">日期</th>
-                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">營地/基地</th>
-                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">上午活動</th>
-                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">下午活動</th>
-                            <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">晚餐</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <!-- 黑森林基地一：Kirchzarten (夜宿 1/2) -->
-                        <tr class="bg-blue-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/6 (一)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 1: Kirchzarten</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">Roth → 營地 (2-2.5h)</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">營地入住、熟悉環境、游泳池放鬆</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">營地</td>
-                        </tr>
-                        <!-- 黑森林基地一：Kirchzarten (夜宿 2/2) — 7/7 Badeparadies Galaxy 區關閉，與 7/8 對調 -->
-                        <tr class="bg-blue-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/7 (二)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 1: Kirchzarten</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><a href="https://www.feldberg-erlebnis.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Feldberg 山區纜車</a>、短步道健行 (從 Kirchzarten 一日來回，約45分車程)</td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><a href="https://www.hochschwarzwald.de/Titisee" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">蒂蒂湖 (Titisee)</a> 湖邊遊樂場</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">湖邊小鎮 / 回營地</td>
-                        </tr>
-                        <!-- 黑森林基地二：Feldberg/Titisee (移動日 + 夜宿 1/2) — 改為 Badeparadies 日 -->
-                        <tr class="bg-green-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/8 (三)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 2: Feldberg/Titisee</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">退營 (Kirchzarten) → <a href="https://www.badeparadies-schwarzwald.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Badeparadies 水上樂園</a> (11-15h，週三 Galaxy 區開放) <a href="https://www.badeparadies-schwarzwald.de/en/shop/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-blue-600 text-white px-2 py-0.5 rounded hover:bg-blue-700">訂票</a></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">前往 Camp 2 Feldberg 入住 (車程約15分)</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">營地烤肉</td>
-                        </tr>
-                        <!-- 黑森林基地二：Feldberg/Titisee (夜宿 2/2) -->
-                        <tr class="bg-green-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/9 (四)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 2: Feldberg/Titisee</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">營地泳池休閒 / <a href="https://www.schluchsee.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Schluchsee</a> 湖畔</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">周邊小鎮輕鬆遊、遊樂場</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">營地餐廳或烤肉</td>
-                        </tr>
-                        <!-- 阿爾薩斯基地三：Colmar (移動日 + 夜宿 1/4) -->
-                        <tr class="bg-purple-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/10 (五)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">退營 (Feldberg) → 前往阿爾薩斯 (約1h)</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">
-                                <a href="https://www.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">上科尼斯堡城堡</a>
-                                <a href="https://tickets.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                                +
-                                <a href="https://www.montagnedessinges.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">猴山 (Montagne des Singes)</a>
-                                <a href="https://www.montagnedessinges.com/en/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
-                            </td>
-                            <td class="px-4 py-4 text-sm text-gray-700">科爾馬小鎮晚餐</td>
-                        </tr>
-                        <!-- 阿爾薩斯基地三：Colmar (夜宿 2/4) -->
-                        <tr class="bg-purple-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/11 (六)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">科爾馬 (Colmar) 小威尼斯、聖馬丁大教堂</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">里博維萊 (Riquewihr) 童話小鎮漫步</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">阿爾薩斯傳統料理</td>
-                        </tr>
-                        <!-- 阿爾薩斯基地三：Colmar (夜宿 3/4) - Eguisheim 法國最美村莊 -->
-                        <tr class="bg-purple-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/12 (日)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">埃居山 (Eguisheim) 法國最美村莊</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">凱塞斯堡 (Kaysersberg) 中世紀古城漫步</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">阿爾薩斯傳統料理</td>
-                        </tr>
-                        <!-- 阿爾薩斯基地三：Colmar (夜宿 4/4) - Europa-Park -->
-                        <tr class="bg-pink-50">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/13 (一)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700" colspan="2">🎢 <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="text-pink-700 underline hover:text-pink-900">Europa-Park 歐洲樂園</a></strong> 一日遊 (車程約45分鐘，歐洲第二大主題樂園，週一票價較划算且人潮較少) <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-pink-600 text-white px-2 py-0.5 rounded hover:bg-pink-700">訂票</a></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">園區內或返回營地</td>
-                        </tr>
-                        <!-- 返回法蘭克福 (移動日) -->
-                        <tr class="bg-amber-100">
-                            <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/14 (二)</strong></td>
-                            <td class="px-4 py-4 text-sm text-gray-700">返回 Frankfurt</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">退營 (8-9h)</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">開車返回 Frankfurt (約2.5h)、還車</td>
-                            <td class="px-4 py-4 text-sm text-gray-700">法蘭克福機場</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <!-- ====== Panel: 行程 ====== -->
+            <div id="panel-itinerary" data-tab-panel>
+                <!-- 總覽行程 -->
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">行程總覽 (7/2 - 7/15，共14天)</h2>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><strong>7/2 (四)</strong> - 台灣出發</li>
+                        <li><strong>7/3 (五)</strong> - 法蘭克福抵達、租車 → Roth</li>
+                        <li><strong>7/4 (六)</strong> - Challenge Roth 報到、輕鬆備賽</li>
+                        <li><strong>7/5 (日)</strong> - <span class="font-bold text-red-600">⭐ Challenge Roth 比賽日 ⭐</span></li>
+                        <li><strong>7/6 (一) - 7/7 (二)</strong> - 基地一：Kirchzarten (黑森林中部，水上樂園、蒂蒂湖)</li>
+                        <li><strong>7/8 (三) - 7/9 (四)</strong> - 基地二：Feldberg / Titisee (黑森林南部/高地)</li>
+                        <li><strong>7/10 (五) - 7/13 (一)</strong> - <span class="font-bold text-purple-600">🇫🇷 基地三：阿爾薩斯 Colmar (法國童話小鎮，4天深度遊)</span></li>
+                        <li><strong>7/14 (二)</strong> - 返回法蘭克福 (約 2.5 小時)、還車、機場</li>
+                        <li><strong>7/15 (三)</strong> - 桃園機場抵達</li>
+                    </ul>
+                </div>
 
-            <!-- 營地建議 -->
-            <hr class="my-10 border-gray-200">
-            <div class="content-section">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">露營地建議</h2>
+                <!-- 核心行程表 -->
+                <hr class="my-10 border-gray-200">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🏕️ 黑森林 4天 + 阿爾薩斯 4天 核心行程</h2>
+                <div class="mt-4 overflow-x-auto relative rounded-lg border border-gray-200">
+                    <table class="min-w-full divide-y divide-gray-200 align-middle">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">日期</th>
+                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">營地/基地</th>
+                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">上午活動</th>
+                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">下午活動</th>
+                                <th scope="col" class="px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">晚餐</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- 黑森林基地一：Kirchzarten (夜宿 1/2) -->
+                            <tr class="bg-blue-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/6 (一)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 1: Kirchzarten</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">Roth → 營地 (2-2.5h)</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">營地入住、熟悉環境、游泳池放鬆</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">營地</td>
+                            </tr>
+                            <!-- 黑森林基地一：Kirchzarten (夜宿 2/2) — 7/7 Badeparadies Galaxy 區關閉，與 7/8 對調 -->
+                            <tr class="bg-blue-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/7 (二)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 1: Kirchzarten</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><a href="https://www.feldberg-erlebnis.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Feldberg 山區纜車</a>、短步道健行 (從 Kirchzarten 一日來回，約45分車程)</td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><a href="https://www.hochschwarzwald.de/Titisee" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">蒂蒂湖 (Titisee)</a> 湖邊遊樂場</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">湖邊小鎮 / 回營地</td>
+                            </tr>
+                            <!-- 黑森林基地二：Feldberg/Titisee (移動日 + 夜宿 1/2) — 改為 Badeparadies 日 -->
+                            <tr class="bg-green-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/8 (三)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 2: Feldberg/Titisee</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">退營 (Kirchzarten) → <a href="https://www.badeparadies-schwarzwald.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Badeparadies 水上樂園</a> (11-15h，週三 Galaxy 區開放) <a href="https://www.badeparadies-schwarzwald.de/en/shop/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-blue-600 text-white px-2 py-0.5 rounded hover:bg-blue-700">訂票</a></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">前往 Camp 2 Feldberg 入住 (車程約15分)</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">營地烤肉</td>
+                            </tr>
+                            <!-- 黑森林基地二：Feldberg/Titisee (夜宿 2/2) -->
+                            <tr class="bg-green-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/9 (四)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 2: Feldberg/Titisee</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">營地泳池休閒 / <a href="https://www.schluchsee.de/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline hover:text-blue-900">Schluchsee</a> 湖畔</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">周邊小鎮輕鬆遊、遊樂場</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">營地餐廳或烤肉</td>
+                            </tr>
+                            <!-- 阿爾薩斯基地三：Colmar (移動日 + 夜宿 1/4) -->
+                            <tr class="bg-purple-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/10 (五)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">退營 (Feldberg) → 前往阿爾薩斯 (約1h)</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">
+                                    <a href="https://www.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">上科尼斯堡城堡</a>
+                                    <a href="https://tickets.haut-koenigsbourg.fr/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
+                                    +
+                                    <a href="https://www.montagnedessinges.com/" target="_blank" rel="noopener noreferrer" class="text-purple-700 underline hover:text-purple-900">猴山 (Montagne des Singes)</a>
+                                    <a href="https://www.montagnedessinges.com/en/" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-purple-600 text-white px-2 py-0.5 rounded hover:bg-purple-700">訂票</a>
+                                </td>
+                                <td class="px-4 py-4 text-sm text-gray-700">科爾馬小鎮晚餐</td>
+                            </tr>
+                            <!-- 阿爾薩斯基地三：Colmar (夜宿 2/4) -->
+                            <tr class="bg-purple-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/11 (六)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">科爾馬 (Colmar) 小威尼斯、聖馬丁大教堂</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">里博維萊 (Riquewihr) 童話小鎮漫步</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">阿爾薩斯傳統料理</td>
+                            </tr>
+                            <!-- 阿爾薩斯基地三：Colmar (夜宿 3/4) - Eguisheim 法國最美村莊 -->
+                            <tr class="bg-purple-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/12 (日)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">埃居山 (Eguisheim) 法國最美村莊</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">凱塞斯堡 (Kaysersberg) 中世紀古城漫步</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">阿爾薩斯傳統料理</td>
+                            </tr>
+                            <!-- 阿爾薩斯基地三：Colmar (夜宿 4/4) - Europa-Park -->
+                            <tr class="bg-pink-50">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/13 (一)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700"><strong>Camp 3: Colmar 🇫🇷</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700" colspan="2">🎢 <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="text-pink-700 underline hover:text-pink-900">Europa-Park 歐洲樂園</a></strong> 一日遊 (車程約45分鐘，歐洲第二大主題樂園，週一票價較划算且人潮較少) <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="ml-1 inline-block text-xs bg-pink-600 text-white px-2 py-0.5 rounded hover:bg-pink-700">訂票</a></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">園區內或返回營地</td>
+                            </tr>
+                            <!-- 返回法蘭克福 (移動日) -->
+                            <tr class="bg-amber-100">
+                                <td class="px-4 py-4 text-sm font-medium text-gray-900"><strong>7/14 (二)</strong></td>
+                                <td class="px-4 py-4 text-sm text-gray-700">返回 Frankfurt</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">退營 (8-9h)</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">開車返回 Frankfurt (約2.5h)、還車</td>
+                                <td class="px-4 py-4 text-sm text-gray-700">法蘭克福機場</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- ====== /Panel: 行程 ====== -->
+
+            <!-- ====== Panel: 露營 ====== -->
+            <div id="panel-camping" data-tab-panel class="hidden">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">⛺ 露營地建議</h2>
                 <ul class="list-disc list-inside space-y-4 text-gray-700 pl-4">
                     <li>
                         <strong class="text-blue-600">基地一 (7/6 - 7/8)：<a href="https://www.camping-kirchzarten.de/" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-800">Camping Kirchzarten</a> 🇩🇪</strong>
@@ -168,10 +182,10 @@
                     </li>
                 </ul>
             </div>
+            <!-- ====== /Panel: 露營 ====== -->
 
-            <!-- 採買攻略 -->
-            <hr class="my-10 border-gray-200">
-            <div class="content-section">
+            <!-- ====== Panel: 採買 ====== -->
+            <div id="panel-shopping" data-tab-panel class="hidden">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🛒 採買攻略 (Roth 賽前補給)</h2>
 
                 <!-- 重點提示 -->
@@ -253,10 +267,10 @@
                     </p>
                 </div>
             </div>
+            <!-- ====== /Panel: 採買 ====== -->
 
-            <!-- 洗衣攻略 -->
-            <hr class="my-10 border-gray-200">
-            <div class="content-section">
+            <!-- ====== Panel: 洗衣 ====== -->
+            <div id="panel-laundry" data-tab-panel class="hidden">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🧺 洗衣攻略 (各營地洗衣設施)</h2>
                 <div class="overflow-x-auto rounded-lg border border-gray-200">
                     <table class="min-w-full divide-y divide-gray-200 text-sm">
@@ -326,10 +340,10 @@
                     </p>
                 </div>
             </div>
+            <!-- ====== /Panel: 洗衣 ====== -->
 
-            <!-- 阿爾薩斯景點介紹 -->
-            <hr class="my-10 border-gray-200">
-            <div class="content-section">
+            <!-- ====== Panel: 景點 ====== -->
+            <div id="panel-alsace" data-tab-panel class="hidden">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">🇫🇷 阿爾薩斯 (Alsace) 景點介紹</h2>
 
                 <div class="grid md:grid-cols-2 gap-6">
@@ -385,10 +399,52 @@
                     </div>
                 </div>
             </div>
-            <!-- ===== 阿爾薩斯區塊結束 ===== -->
+            <!-- ====== /Panel: 景點 ====== -->
 
         </div>
     </div>
+
+    <script>
+        (function() {
+            const tabs = document.querySelectorAll('button[data-tab]');
+            const panels = document.querySelectorAll('[data-tab-panel]');
+
+            function setActive(name) {
+                tabs.forEach(btn => {
+                    const isActive = btn.dataset.tab === name;
+                    btn.classList.toggle('bg-blue-600', isActive);
+                    btn.classList.toggle('text-white', isActive);
+                    btn.classList.toggle('border-blue-600', isActive);
+                    btn.classList.toggle('shadow-sm', isActive);
+                    btn.classList.toggle('bg-white', !isActive);
+                    btn.classList.toggle('text-gray-700', !isActive);
+                    btn.classList.toggle('border-gray-300', !isActive);
+                    btn.classList.toggle('hover:bg-gray-50', !isActive);
+                });
+                panels.forEach(p => {
+                    p.classList.toggle('hidden', p.id !== 'panel-' + name);
+                });
+                // 切換時將視窗滾到 tab 列上方一點點，避免內容被 sticky 遮住
+                if (window.scrollY > 80) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }
+
+            tabs.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setActive(btn.dataset.tab);
+                    if (history.replaceState) {
+                        history.replaceState(null, '', '#' + btn.dataset.tab);
+                    }
+                });
+            });
+
+            // 支援 URL hash 直接開啟對應 tab，例如 #shopping
+            const initial = (location.hash || '#itinerary').slice(1);
+            const valid = Array.from(tabs).some(b => b.dataset.tab === initial);
+            setActive(valid ? initial : 'itinerary');
+        })();
+    </script>
 
 </body>
 </html>
