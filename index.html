@@ -165,6 +165,91 @@
             scrollbar-width: none;
         }
         .tab-scroll::-webkit-scrollbar { display: none; }
+
+        /* ===== Mobile responsive ===== */
+        @media (max-width: 768px) {
+            /* Tab buttons: smaller and more compact */
+            .tab-btn {
+                padding: 8px 10px;
+                min-width: auto;
+                border-radius: 14px;
+                gap: 2px;
+            }
+            .tab-btn .tab-icon { font-size: 18px; }
+            .tab-btn .tab-label { font-size: 12px; }
+            .tab-btn .tab-tag { display: none; }
+
+            /* Section heading smaller */
+            .section-title { font-size: 22px; line-height: 1.3; }
+            .display-serif { font-size: 32px !important; }
+
+            /* Pill links: bigger tap target */
+            .pill-link {
+                font-size: 12px;
+                padding: 6px 12px;
+                min-height: 28px;
+                line-height: 16px;
+            }
+
+            /* Card padding compact */
+            .paper-card { border-radius: 18px; }
+            .soft-card { border-radius: 12px; }
+
+            /* ===== Schedule table → card layout on mobile ===== */
+            .schedule-table { display: block; }
+            .schedule-table thead { display: none; }
+            .schedule-table tbody { display: block; }
+            .schedule-table tr {
+                display: block;
+                margin-bottom: 12px;
+                border-radius: 14px;
+                padding: 14px 16px;
+                border: 1px solid var(--line);
+            }
+            .schedule-table td {
+                display: block;
+                width: 100%;
+                padding: 6px 0 !important;
+                border-bottom: 1px dashed var(--line) !important;
+                font-size: 14px;
+            }
+            .schedule-table td:last-child { border-bottom: none !important; }
+            .schedule-table td:before {
+                content: attr(data-label);
+                display: block;
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 11px;
+                font-weight: 600;
+                color: var(--ink-soft);
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                margin-bottom: 2px;
+            }
+            /* First cell (date) gets emphasized treatment */
+            .schedule-table tr td:first-child:before { display: none; }
+            .schedule-table tr td:first-child {
+                font-size: 16px;
+                padding-bottom: 8px !important;
+                margin-bottom: 4px;
+                color: var(--coffee);
+            }
+            /* colspan="2" cells: don't show label twice */
+            .schedule-table td[colspan]:before { content: "活動"; }
+
+            /* Header layout */
+            header > div { flex-direction: column; align-items: flex-start; }
+
+            /* Wider hit area on table links */
+            .schedule-table a.lk { padding: 2px 0; display: inline-block; }
+        }
+
+        /* Tiny screens (≤ 380px) — even tighter */
+        @media (max-width: 380px) {
+            body { padding: 8px; }
+            .tab-btn { padding: 6px 8px; }
+            .tab-btn .tab-icon { font-size: 16px; }
+            .tab-btn .tab-label { font-size: 11px; }
+        }
     </style>
 </head>
 <body class="min-h-screen p-4 md:p-8">
@@ -1027,6 +1112,20 @@
     </div>
 
     <script>
+        // Auto-populate data-label on table cells for mobile card view
+        document.querySelectorAll('table.schedule-table').forEach(table => {
+            const headers = Array.from(table.querySelectorAll('thead th')).map(th => th.textContent.trim());
+            table.querySelectorAll('tbody tr').forEach(tr => {
+                let colIdx = 0;
+                tr.querySelectorAll('td').forEach(td => {
+                    if (!td.hasAttribute('data-label')) {
+                        td.setAttribute('data-label', headers[colIdx] || '');
+                    }
+                    colIdx += parseInt(td.getAttribute('colspan') || '1', 10);
+                });
+            });
+        });
+
         (function() {
             const tabs = document.querySelectorAll('button[data-tab]');
             const panels = document.querySelectorAll('[data-tab-panel]');
