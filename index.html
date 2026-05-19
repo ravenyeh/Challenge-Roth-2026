@@ -645,17 +645,39 @@
                     </div>
                 </div>
 
-                <!-- 日期不符提醒 -->
+                <!-- 日期不符提醒 (含時差換算) -->
                 <div class="callout callout-warn mb-6">
-                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Attenzione · 報價 vs 行程日期不一致</p>
-                    <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-2">
-                        <p>⚠️ 報價單 <strong>7/4 — 7/13 (10 天)</strong>，但行程是 <strong>7/3 抵達 → 7/14 還車 (12 天)</strong>，相差 <strong>2 天</strong>。</p>
-                        <p class="font-medium">需擇一處理：</p>
-                        <ul class="list-disc list-inside ml-2 space-y-1">
-                            <li><strong>方案 A：延長租期</strong>為 7/3 — 7/14 (12 天)，請 Anywhere Campers 重新報價（每天約 €300+）。</li>
-                            <li><strong>方案 B：壓縮行程</strong>為 7/4 取車、7/13 還車，刪掉 7/3 過夜（改住機場飯店）及 7/14 行程（改成 7/13 早上還車當天搭機回台）。</li>
-                        </ul>
-                        <p class="text-[color:var(--accent)]">★ 建議：先和 Anywhere Campers 確認 12 天總價，再決定。</p>
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Attenzione · 取車/還車日期需釐清</p>
+                    <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-3">
+                        <div>
+                            <p class="font-medium text-[color:var(--coffee)]">🕐 時差換算（夏令時）</p>
+                            <p class="text-xs mt-1">台灣 UTC+8 ↔ 德國夏令時 UTC+2，<strong>台灣較快 6 小時</strong>。長班機 13-14h，「7/2 台灣晚上出發 → 7/3 德國早上抵達」、「7/14 德國晚上出發 → 7/15 台灣下午抵達」皆對得上。<strong class="text-[color:var(--ink)]">時差不會吃掉日期</strong>。</p>
+                        </div>
+
+                        <div>
+                            <p class="font-medium text-[color:var(--coffee)]">📅 真正問題：飛機在路上的日子沒納入</p>
+                            <ul class="list-disc list-inside ml-2 mt-1 space-y-0.5 text-xs">
+                                <li>報價 <strong>7/4 — 7/13 (10 天露營車)</strong></li>
+                                <li>德國境內實際 <strong>7/3 抵達 — 7/14 還車 (12 天)</strong></li>
+                                <li>差 2 天 = 7/3 抵達當天 + 7/14 還車當天</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <p class="font-medium text-[color:var(--coffee)]">擇一處理：</p>
+                            <ul class="list-disc list-inside ml-2 mt-1 space-y-1.5">
+                                <li>
+                                    <strong>方案 A — 維持 10 天租期 (省錢)：</strong><br>
+                                    <span class="ml-4 block">7/3 抵達 FRA → 機場飯店過夜 → 7/4 早取車 → Roth；7/13 Europa-Park 結束後直接還車 → 當晚飛機 → 7/15 抵台。<br><span class="text-[color:var(--accent)]">需要：7/3 機場飯店訂房 + 把行程表的「7/14 還車」併進 7/13。</span></span>
+                                </li>
+                                <li>
+                                    <strong>方案 B — 延長租期到 12 天：</strong><br>
+                                    <span class="ml-4 block">請 Anywhere Campers 改報價為 7/3 — 7/14。多 2 天 ≈ <strong>+€600</strong>。<br><span class="text-[color:var(--accent)]">需要：航班 7/3 早上抵達 (才能當天取車) + 7/14 晚班機回台。</span></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p class="text-[color:var(--accent)] font-medium">★ 先確認航班時間：7/3 抵達 FRA 是早上 / 下午 / 晚上？再決定方案。</p>
                     </div>
                 </div>
 
