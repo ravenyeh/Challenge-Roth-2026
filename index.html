@@ -219,6 +219,11 @@
                         <span class="tab-label">景點</span>
                         <span class="tab-tag">Tab 5</span>
                     </button>
+                    <button data-tab="rv" class="tab-btn">
+                        <span class="tab-icon">🚐</span>
+                        <span class="tab-label">露營車</span>
+                        <span class="tab-tag">Tab 6</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -613,6 +618,199 @@
                 </div>
             </section>
             <!-- ====== /Panel: 景點 ====== -->
+
+            <!-- ====== Panel: 露營車 ====== -->
+            <section id="panel-rv" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Camper · Anywhere Campers</p>
+                <h2 class="section-title mt-1 mb-6">🚐 露營車 · 取車 / 操作 / 加油</h2>
+
+                <!-- 取車資訊 -->
+                <div class="soft-card p-5 md:p-6 mb-6" style="background: var(--paper-3); border: 1px solid var(--paper-5);">
+                    <p class="section-eyebrow mb-1">Veicolo · 車輛</p>
+                    <h3 class="text-xl font-semibold text-[color:var(--coffee)] mb-3">Adria Matrix M670SL <span class="text-base font-normal text-[color:var(--ink-soft)]">(4 adults + 1 child · 自排)</span></h3>
+                    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-[color:var(--coffee-soft)]">
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">Pick-up：</span><strong>Frankfurt · 2026-07-04</strong></div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">Drop-off：</span><strong>Frankfurt · 2026-07-13</strong></div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">天數：</span>10 days</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">報價：</span><strong>3,150 €</strong> (自排) / 2,900 € (手排)</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">柴油箱：</span>90 L</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">淨水箱：</span>140 L</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">廢水箱：</span>92 L</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">尺寸：</span>長 7.4m · 寬 2.35m · 高 3m</div>
+                    </div>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <a href="docs/anywhere-campers-quote.pdf" target="_blank" rel="noopener noreferrer" class="pill-link warm">📄 完整報價 PDF</a>
+                        <a href="docs/adria-matrix-guide.pdf" target="_blank" rel="noopener noreferrer" class="pill-link">📘 Adria Matrix 操作指南</a>
+                        <a href="https://anywherecampers.com/our-campers/" target="_blank" rel="noopener noreferrer" class="pill-link">🌐 Anywhere Campers 官網</a>
+                    </div>
+                </div>
+
+                <!-- 日期不符提醒 -->
+                <div class="callout callout-warn mb-6">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Attenzione · 報價 vs 行程日期不一致</p>
+                    <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-2">
+                        <p>⚠️ 報價單 <strong>7/4 — 7/13 (10 天)</strong>，但行程是 <strong>7/3 抵達 → 7/14 還車 (12 天)</strong>，相差 <strong>2 天</strong>。</p>
+                        <p class="font-medium">需擇一處理：</p>
+                        <ul class="list-disc list-inside ml-2 space-y-1">
+                            <li><strong>方案 A：延長租期</strong>為 7/3 — 7/14 (12 天)，請 Anywhere Campers 重新報價（每天約 €300+）。</li>
+                            <li><strong>方案 B：壓縮行程</strong>為 7/4 取車、7/13 還車，刪掉 7/3 過夜（改住機場飯店）及 7/14 行程（改成 7/13 早上還車當天搭機回台）。</li>
+                        </ul>
+                        <p class="text-[color:var(--accent)]">★ 建議：先和 Anywhere Campers 確認 12 天總價，再決定。</p>
+                    </div>
+                </div>
+
+                <!-- 加油攻略 -->
+                <p class="section-eyebrow mb-1">Carburante · 加油規劃</p>
+                <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-4">⛽ 加油時機與地點建議</h3>
+
+                <!-- 加油摘要 -->
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">📊 全程駕駛估算</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1">
+                            <li>總里程約 <strong class="text-[color:var(--ink)]">1,500 km</strong></li>
+                            <li>油耗約 10 L / 100 km</li>
+                            <li>需要 <strong class="text-[color:var(--ink)]">~150 L</strong> 柴油</li>
+                            <li>90 L 油箱 → 至少加 <strong class="text-[color:var(--accent)]">2 次</strong> 才夠</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">💶 油費試算</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1">
+                            <li>德國柴油 ~€1.65 / L</li>
+                            <li>法國柴油 ~€1.80 / L（貴 ~10%）</li>
+                            <li>全程預估 <strong class="text-[color:var(--ink)]">~€250</strong></li>
+                            <li class="text-[color:var(--accent)]">★ 進法國前在德國加滿最划算</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 建議加油點時間表 -->
+                <div class="overflow-x-auto rounded-2xl border border-[color:var(--line)] mb-6">
+                    <table class="schedule-table min-w-full">
+                        <thead>
+                            <tr>
+                                <th>日期 / 時機</th>
+                                <th>地點</th>
+                                <th>路段 / 理由</th>
+                                <th>優先度</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-base-1">
+                                <td><strong>7/4 (六) 取車後</strong></td>
+                                <td>Frankfurt 機場 / 出城</td>
+                                <td>確認油表 — 通常滿油交車，若非滿油請在 A3/A6 上加滿。</td>
+                                <td class="text-[color:var(--ink-soft)]">確認</td>
+                            </tr>
+                            <tr class="row-base-1">
+                                <td><strong>7/6 (一) Roth 出發前 ⛽</strong></td>
+                                <td>Kaufland Roth 附近加油站 / Aral / Shell</td>
+                                <td>準備跑 350 km 到 Kirchzarten，德國油價穩定，<strong>加滿出發</strong>。</td>
+                                <td class="text-[color:var(--accent)] font-semibold">必加 1️⃣</td>
+                            </tr>
+                            <tr class="row-base-2">
+                                <td><strong>7/10 (五) Feldberg 出發前 ⛽</strong></td>
+                                <td>Titisee-Neustadt / Feldberg 加油站</td>
+                                <td>進法國前最後一站，德國油價比法國便宜 ~10%。<strong>務必加滿</strong>，省下整段法國車程的油價差。</td>
+                                <td class="text-[color:var(--accent)] font-semibold">必加 2️⃣</td>
+                            </tr>
+                            <tr class="row-base-3">
+                                <td><strong>7/13 (一) Europa-Park 出來時 ⛽</strong></td>
+                                <td>Rust / Lahr 附近 (德國境內)</td>
+                                <td>樂園在德國境內，順道在德國加油較便宜。為 7/14 還車前累積里程做準備。</td>
+                                <td class="text-[color:var(--accent-warm)] font-semibold">建議</td>
+                            </tr>
+                            <tr class="row-highlight">
+                                <td><strong>還車當天 ⛽⛽<br><span class="font-normal text-xs text-[color:var(--ink-soft)]">(報價 7/13 / 行程 7/14)</span></strong></td>
+                                <td>Frankfurt 機場附近最後一個加油站</td>
+                                <td><strong class="text-[color:var(--accent)]">租車公司通常要求滿油還車</strong>，否則收高額補油費。在還車地點 5-10 km 內加滿油保留收據。</td>
+                                <td class="text-[color:var(--accent)] font-semibold">必加 3️⃣</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout callout-info mb-8">
+                    <p class="text-sm text-[color:var(--coffee-soft)] leading-relaxed">
+                        💡 <strong>省錢小撇步：</strong>德國 Aral / Shell 自助加油，柴油 (Diesel) 黑色油槍。
+                        週日 / 假日油價通常較高，盡量在週間下午加油。
+                        加油站週日仍營業 (有別於超市)，不會找不到。
+                    </p>
+                </div>
+
+                <!-- 操作速查 -->
+                <p class="section-eyebrow mb-1">Manuale · 操作速查</p>
+                <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-4">📘 Adria Matrix 關鍵操作（完整版見 PDF）</h3>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">⚡ 啟程前準備</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>充電：駕駛側充電插座 + 延長線接營地電樁</li>
+                            <li>LPG 補充後：<strong class="text-[color:var(--ink)]">按住兩個綠色按鈕 10 秒</strong>啟動瓦斯系統</li>
+                            <li>自行車架：放下 → 固定座 → 上車 → 束帶拉緊 → 頂部固定臂</li>
+                            <li>務必掛<strong class="text-[color:var(--accent)]">紅白警示牌</strong>於車架最外側</li>
+                        </ul>
+                    </div>
+
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">⛺ 抵達營地</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>調平：取出黃色楔塊 → 放在需抬升的輪胎前 → 緩慢駛上</li>
+                            <li>遮陽篷：<strong class="text-[color:var(--accent)]">需兩人操作</strong>，風雨天禁用</li>
+                            <li>水泵：使用淋浴 / 水槽前必開，提前 15 分熱水預熱</li>
+                        </ul>
+                    </div>
+
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">🚿 生活區操作</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>熱水：開總電 → 啟動水泵 → 旋鈕轉到 40°C 經濟 / 60°C 熱水 → 等 10-15 分</li>
+                            <li>馬桶：使用前拉開閥門 → 沖水 → 用後關閥門 + 投化學分解錠</li>
+                            <li>冰箱：行駛中用車輛電瓶；駐紮時用 LPG 或外接電源</li>
+                            <li>爐具：開 LPG 氣閥 → 按下旋鈕點火；剛加完瓦斯火會閃爍幾分鐘屬正常</li>
+                        </ul>
+                    </div>
+
+                    <div class="soft-card p-4" style="background: var(--paper-3);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">🧼 退營前處理</h4>
+                        <ul class="text-sm text-[color:var(--coffee-soft)] space-y-1 list-disc list-inside">
+                            <li><strong>黑水箱</strong>：到 dump station 倒空 → 沖洗 → 推回原位，<strong class="text-[color:var(--accent)]">注意頂部轉盤必須朝正前方</strong>否則卡住</li>
+                            <li><strong>灰水箱</strong>：駛至灰水排放區 → 拉開閥門 → 排空 → 關閥門</li>
+                            <li>馬桶紅燈亮起 = 黑水箱滿，立刻清空</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 常見問題 -->
+                <p class="section-eyebrow mb-1">FAQ · 常見問題快速排除</p>
+                <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-4">🛠️ 故障排除</h3>
+                <div class="grid md:grid-cols-3 gap-3">
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-1">🔥 爐火閃爍不定</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">剛補完瓦斯，壓力過高。<strong class="text-[color:var(--ink)]">讓爐火燒幾分鐘自動穩定</strong>。</p>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-1">🥶 冰箱不夠冷</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">檢查 LPG 存量 → 重啟 LPG (按綠鈕 10 秒) → 冰箱關 30 秒後重啟。</p>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-1">🔔 冰箱嗶嗶聲</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">冰箱門未關緊，確認完全關上即可。</p>
+                    </div>
+                </div>
+
+                <!-- 24/7 救援 -->
+                <div class="callout callout-danger mt-6">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">SOS · 緊急支援</p>
+                    <p class="text-sm text-[color:var(--coffee-soft)] leading-relaxed">
+                        🆘 <strong>Anywhere Campers 提供 24/7 info line + Allianz 全歐路邊救援</strong>。
+                        取車當天請務必確認：(1) 駕訓人員留下的 24h 緊急電話、(2) Allianz 救援卡放在駕駛座手套箱、(3) 拍下車輛交付狀態照片。
+                    </p>
+                </div>
+            </section>
+            <!-- ====== /Panel: 露營車 ====== -->
 
         </main>
 
