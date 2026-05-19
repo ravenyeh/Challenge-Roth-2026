@@ -233,19 +233,44 @@
 
             <!-- ====== Panel: 行程 ====== -->
             <section id="panel-itinerary" data-tab-panel>
+                <!-- 航班資訊 -->
+                <p class="section-eyebrow">Voli · 航班資訊</p>
+                <h2 class="section-title mt-1 mb-4">✈️ 中華航空 CI061 / CI062</h2>
+                <div class="grid md:grid-cols-2 gap-4 mb-8">
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Andata · 去程</p>
+                        <h3 class="font-semibold text-[color:var(--coffee)] mb-3">CI061 · TPE → FRA</h3>
+                        <div class="text-sm text-[color:var(--coffee-soft)] space-y-1">
+                            <p>🛫 <strong>7/2 (四) 22:50</strong> 桃園 T1</p>
+                            <p>🛬 <strong>7/3 (五) 06:50</strong> 法蘭克福 T3</p>
+                            <p class="text-xs mt-2 text-[color:var(--ink-soft)]">A359 · 經濟艙 N · 飛行 14h · 早班抵達可當日取車</p>
+                        </div>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-3);">
+                        <p class="font-serif-it italic text-sm text-[color:var(--coffee-soft)] mb-1">Ritorno · 回程</p>
+                        <h3 class="font-semibold text-[color:var(--coffee)] mb-3">CI062 · FRA → TPE</h3>
+                        <div class="text-sm text-[color:var(--coffee-soft)] space-y-1">
+                            <p>🛫 <strong>7/14 (二) 11:15</strong> 法蘭克福 T3</p>
+                            <p>🛬 <strong>7/15 (三) 06:15</strong> 桃園 T1</p>
+                            <p class="text-xs mt-2 text-[color:var(--accent)] font-semibold">⚠️ 上午班機，最遲 08:00 到 FRA T3</p>
+                        </div>
+                    </div>
+                </div>
+
                 <p class="section-eyebrow">Itinerario · 完整日程</p>
                 <h2 class="section-title mt-1 mb-6">行程總覽 <span class="font-serif-it italic text-[color:var(--ink-soft)] text-2xl font-normal">(7/2 — 7/15, 14 天)</span></h2>
 
                 <ul class="space-y-2.5 text-[color:var(--ink)]">
-                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 1 · 7/2 (四)</span><span>台灣出發</span></li>
-                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 2 · 7/3 (五)</span><span>法蘭克福抵達、租車 → Roth</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 1 · 7/2 (四)</span><span>22:50 CI061 桃園 → 法蘭克福</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 2 · 7/3 (五)</span><span>06:50 抵達 FRA → 取車 → 開往 Roth (約 2.5h)</span></li>
                     <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 3 · 7/4 (六)</span><span>Challenge Roth 報到、輕鬆備賽</span></li>
                     <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 4 · 7/5 (日)</span><span class="font-semibold text-[color:var(--accent)]">⭐ Challenge Roth 比賽日 ⭐</span></li>
                     <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 5-6 · 7/6-7</span><span>基地一：Kirchzarten (黑森林中部，水上樂園、蒂蒂湖)</span></li>
                     <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 7-8 · 7/8-9</span><span>基地二：Feldberg / Titisee (黑森林南部高地)</span></li>
-                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 9-12 · 7/10-13</span><span class="font-medium">🇫🇷 基地三：阿爾薩斯 Colmar (法國童話小鎮，4 天深度遊)</span></li>
-                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 13 · 7/14 (二)</span><span>返回法蘭克福 (約 2.5h)、還車、機場</span></li>
-                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 14 · 7/15 (三)</span><span>桃園機場抵達</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 9-11 · 7/10-12</span><span class="font-medium">🇫🇷 基地三：阿爾薩斯 Colmar (法國童話小鎮，3 晚)</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 12 · 7/13 (一)</span><span>Europa-Park → <strong class="text-[color:var(--accent)]">直接開往 FRA 附近過夜</strong>（不回 Colmar）</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 13 · 7/14 (二)</span><span>07:30 還車 → FRA T3 → 11:15 CI062 起飛</span></li>
+                    <li class="flex gap-3"><span class="font-serif-it italic text-[color:var(--ink-soft)] w-28 shrink-0">Day 14 · 7/15 (三)</span><span>06:15 抵達桃園</span></li>
                 </ul>
 
                 <!-- 核心行程表 -->
@@ -322,16 +347,17 @@
                                 </tr>
                                 <tr class="row-highlight">
                                     <td><strong>7/13 (一)</strong></td>
-                                    <td><strong>Camp 3: Colmar 🇫🇷</strong></td>
-                                    <td colspan="2">🎢 <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="lk">Europa-Park 歐洲樂園</a></strong> 一日遊 (車程約 45 分鐘，歐洲第二大主題樂園，週一票價較划算且人潮較少) <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="pill-link warm">訂票</a></td>
-                                    <td>園區內或返回營地</td>
+                                    <td><strong>退 Camp 3 → FRA 附近 🇩🇪</strong></td>
+                                    <td>退營 Colmar (~9h) → <strong><a href="https://www.europapark.de/" target="_blank" rel="noopener noreferrer" class="lk">Europa-Park</a></strong> (車程 45 分) <a href="https://www.europapark.de/en/theme-park/tickets-offers" target="_blank" rel="noopener noreferrer" class="pill-link warm">訂票</a></td>
+                                    <td>玩到 17-18h → 直接開往 Frankfurt 附近 (Rust → FRA 約 2h)，<strong class="text-[color:var(--accent)]">不回 Colmar</strong></td>
+                                    <td>FRA 附近營地 / 機場飯店</td>
                                 </tr>
                                 <tr class="row-travel">
-                                    <td><strong>7/14 (二)</strong></td>
-                                    <td>返回 Frankfurt</td>
-                                    <td>退營 (8-9h)</td>
-                                    <td>開車返回 Frankfurt (約 2.5h)、還車</td>
-                                    <td>法蘭克福機場</td>
+                                    <td><strong>7/14 (二) ✈️</strong></td>
+                                    <td>還車 + 起飛</td>
+                                    <td><strong>06:30 起床 → 07:00 出發 → 加油站滿油 → 07:30 抵還車點</strong></td>
+                                    <td>08:00 還車交接 → 09:00 抵 FRA T3 報到 → <strong class="text-[color:var(--accent)]">11:15 CI062 起飛</strong></td>
+                                    <td>機上</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -626,59 +652,117 @@
 
                 <!-- 取車資訊 -->
                 <div class="soft-card p-5 md:p-6 mb-6" style="background: var(--paper-3); border: 1px solid var(--paper-5);">
-                    <p class="section-eyebrow mb-1">Veicolo · 車輛</p>
-                    <h3 class="text-xl font-semibold text-[color:var(--coffee)] mb-3">Adria Matrix M670SL <span class="text-base font-normal text-[color:var(--ink-soft)]">(4 adults + 1 child · 自排)</span></h3>
+                    <div class="flex items-start justify-between flex-wrap gap-2 mb-2">
+                        <p class="section-eyebrow">Veicolo · Rental Agreement 3491</p>
+                        <span class="inline-block text-xs font-semibold bg-[color:var(--coffee)] text-[color:var(--paper)] px-2 py-0.5 rounded">✓ 合約已簽</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[color:var(--coffee)] mb-3">Adria Matrix M670SL · 2026 <span class="text-base font-normal text-[color:var(--ink-soft)]">(4 adults + 1 child · 自排)</span></h3>
                     <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-[color:var(--coffee-soft)]">
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">Pick-up：</span><strong>Frankfurt · 2026-07-04</strong></div>
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">Drop-off：</span><strong>Frankfurt · 2026-07-13</strong></div>
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">天數：</span>10 days</div>
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">報價：</span><strong>3,150 €</strong> (自排) / 2,900 € (手排)</div>
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">柴油箱：</span>90 L</div>
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">淨水箱：</span>140 L</div>
-                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">廢水箱：</span>92 L</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">Pick-up：</span><strong>Frankfurt · 2026-07-03</strong></div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">Drop-off：</span><strong>Frankfurt · 2026-07-14</strong></div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">天數：</span>12 days</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">租金：</span><strong>3,670 €</strong></div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">保證金：</span><strong>1,500 €</strong> (取車當天付，無損還車後 10 天退)</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">保險：</span>第三人責任 + 全險 + 防盜 (€2m)</div>
+                        <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">柴油箱：</span>90 L (滿油交車 / 滿油還車)</div>
                         <div><span class="font-serif-it italic text-[color:var(--ink-soft)]">尺寸：</span>長 7.4m · 寬 2.35m · 高 3m</div>
                     </div>
                     <div class="mt-4 flex flex-wrap gap-2">
-                        <a href="docs/anywhere-campers-quote.pdf" target="_blank" rel="noopener noreferrer" class="pill-link warm">📄 完整報價 PDF</a>
+                        <a href="docs/rental-agreement-3491.pdf" target="_blank" rel="noopener noreferrer" class="pill-link warm">📄 Rental Agreement 3491</a>
+                        <a href="docs/anywhere-campers-quote.pdf" target="_blank" rel="noopener noreferrer" class="pill-link">📋 原始報價</a>
                         <a href="docs/adria-matrix-guide.pdf" target="_blank" rel="noopener noreferrer" class="pill-link">📘 Adria Matrix 操作指南</a>
                         <a href="https://anywherecampers.com/our-campers/" target="_blank" rel="noopener noreferrer" class="pill-link">🌐 Anywhere Campers 官網</a>
                     </div>
                 </div>
 
-                <!-- 日期不符提醒 (含時差換算) -->
-                <div class="callout callout-warn mb-6">
-                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Attenzione · 取車/還車日期需釐清</p>
-                    <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-3">
-                        <div>
-                            <p class="font-medium text-[color:var(--coffee)]">🕐 時差換算（夏令時）</p>
-                            <p class="text-xs mt-1">台灣 UTC+8 ↔ 德國夏令時 UTC+2，<strong>台灣較快 6 小時</strong>。長班機 13-14h，「7/2 台灣晚上出發 → 7/3 德國早上抵達」、「7/14 德國晚上出發 → 7/15 台灣下午抵達」皆對得上。<strong class="text-[color:var(--ink)]">時差不會吃掉日期</strong>。</p>
-                        </div>
+                <!-- 已確認資訊 -->
+                <div class="callout callout-info mb-6" style="background: #E2EAD8; border-color: #6B8E4E;">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Confermato · 已確認</p>
+                    <p class="text-sm text-[color:var(--coffee-soft)] leading-relaxed">
+                        ✅ <strong>租車日期已與航班完美對齊：</strong>7/3 06:50 抵達 FRA → 直接取車；7/14 早上還車 → 11:15 CI062 起飛。
+                        <span class="block mt-1">合約 12 天 = 行程 12 天（德國境內）。租金 €3,670 + 保證金 €1,500（還車後退）。</span>
+                    </p>
+                </div>
 
-                        <div>
-                            <p class="font-medium text-[color:var(--coffee)]">📅 真正問題：飛機在路上的日子沒納入</p>
-                            <ul class="list-disc list-inside ml-2 mt-1 space-y-0.5 text-xs">
-                                <li>報價 <strong>7/4 — 7/13 (10 天露營車)</strong></li>
-                                <li>德國境內實際 <strong>7/3 抵達 — 7/14 還車 (12 天)</strong></li>
-                                <li>差 2 天 = 7/3 抵達當天 + 7/14 還車當天</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <p class="font-medium text-[color:var(--coffee)]">擇一處理：</p>
-                            <ul class="list-disc list-inside ml-2 mt-1 space-y-1.5">
-                                <li>
-                                    <strong>方案 A — 維持 10 天租期 (省錢)：</strong><br>
-                                    <span class="ml-4 block">7/3 抵達 FRA → 機場飯店過夜 → 7/4 早取車 → Roth；7/13 Europa-Park 結束後直接還車 → 當晚飛機 → 7/15 抵台。<br><span class="text-[color:var(--accent)]">需要：7/3 機場飯店訂房 + 把行程表的「7/14 還車」併進 7/13。</span></span>
-                                </li>
-                                <li>
-                                    <strong>方案 B — 延長租期到 12 天：</strong><br>
-                                    <span class="ml-4 block">請 Anywhere Campers 改報價為 7/3 — 7/14。多 2 天 ≈ <strong>+€600</strong>。<br><span class="text-[color:var(--accent)]">需要：航班 7/3 早上抵達 (才能當天取車) + 7/14 晚班機回台。</span></span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p class="text-[color:var(--accent)] font-medium">★ 先確認航班時間：7/3 抵達 FRA 是早上 / 下午 / 晚上？再決定方案。</p>
+                <!-- 7/14 還車緊湊提醒 -->
+                <div class="callout callout-danger mb-6">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Critico · 關鍵動線</p>
+                    <p class="font-semibold text-[color:var(--coffee)] mb-2">⚠️ 7/14 還車 → 飛機 時間非常緊</p>
+                    <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-1">
+                        <p>CI062 <strong>11:15 起飛</strong> → 國際線最遲 <strong>08:00 報到</strong> → 從還車點到 T3 約 30 分。</p>
+                        <p>意味著 <strong class="text-[color:var(--accent)]">7/14 早 07:00 前必須在 FRA 附近</strong>。</p>
+                        <p class="mt-2 font-medium text-[color:var(--coffee)]">⮕ 解法：7/13 Europa-Park 結束後不要回 Colmar，直接從 Rust 開回 FRA 附近過夜 (約 2h 車程)。</p>
+                        <p class="text-xs mt-1">Camp 3 因此只住 3 晚 (7/10-7/12)。7/13 晚住 Frankfurt 附近營地（如 Knaus Campingpark Frankfurt）或機場飯店。</p>
                     </div>
+                </div>
+
+                <!-- 合約重點摘要 -->
+                <p class="section-eyebrow mb-1">Termini · 合約重點</p>
+                <h3 class="text-lg font-semibold text-[color:var(--coffee)] mb-3">📋 關鍵條款</h3>
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">💶 付款時程</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>訂金：簽約後 10 天內付 <strong>30% = €1,101</strong></li>
+                            <li>餘款：出發前 <strong>45 天</strong>付清（5/19 = 7/3-45天，即 <strong>~5/19</strong>需付清）</li>
+                            <li>保證金：取車當天付 <strong>€1,500</strong>（無損還車後 10 天退）</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">❌ 取消費階梯</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>≥ 45 天前取消：<strong>10%</strong> (€367)</li>
+                            <li>44-30 天前：<strong>35%</strong> (€1,284)</li>
+                            <li>29-14 天前：<strong>65%</strong> (€2,385)</li>
+                            <li>&lt; 14 天前：<strong class="text-[color:var(--accent)]">100%</strong> (全額)</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">✅ 含項目</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>無限里程、單向租、24/7 helpline</li>
+                            <li>滿油交車 + 滿瓦斯 + 廁所化學藥</li>
+                            <li><strong>奧地利/瑞士/捷克</strong>高速公路 vignette</li>
+                            <li>2 山地車 (含鎖) + 餐桌椅 + 烤爐 + GPS</li>
+                            <li><strong>2 個兒童座椅 (ISOFIX)</strong></li>
+                            <li>廚房/寢室/浴室完整備品</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-3);">
+                        <h4 class="font-semibold text-[color:var(--accent)] mb-2">⚠️ 罰金條款</h4>
+                        <ul class="text-sm text-[color:var(--coffee-soft)] space-y-1 list-disc list-inside">
+                            <li>晚還車：<strong>€30 / 小時</strong></li>
+                            <li>車內抽菸：<strong>€1,000</strong>（嚴禁）</li>
+                            <li>不潔還車：<strong>€300</strong>（地板掃過、垃圾倒、黑水倒空）</li>
+                            <li>違規 / 過路費：實價 + <strong>€10/件</strong>管理費</li>
+                            <li>小修 ≤€150 不需事前同意，事後通報即可</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">👤 駕駛資格</h4>
+                        <ul class="text-sm text-[color:var(--ink-soft)] space-y-1 list-disc list-inside">
+                            <li>須 <strong>23 歲以上</strong>，駕照持有 ≥ 2 年</li>
+                            <li>須由合格駕駛操作，不可分租 / 不可比賽 / 不可拖車</li>
+                            <li>同意 <strong>GPS 追蹤</strong>（合約條款）</li>
+                        </ul>
+                    </div>
+                    <div class="soft-card p-4" style="background: var(--paper-2);">
+                        <h4 class="font-semibold text-[color:var(--coffee)] mb-2">🌍 可駕駛國家</h4>
+                        <p class="text-sm text-[color:var(--ink-soft)]">歐盟 27 國 + UK + 愛爾蘭 + 摩納哥 + 瑞士 + 列支敦士登 + 挪威 + 巴爾幹 (波黑、塞、蒙、馬其頓、阿)。<br><span class="text-xs">本行程僅涉及 <strong class="text-[color:var(--ink)]">德國 + 法國</strong>，皆在允許範圍。</span></p>
+                    </div>
+                </div>
+
+                <!-- 取車當天動作清單 -->
+                <div class="callout callout-warn mb-6">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Check-list · 7/3 取車當天</p>
+                    <ol class="text-sm text-[color:var(--coffee-soft)] list-decimal list-inside space-y-1">
+                        <li>📌 取車地點 <strong>2 週前 (即 6/19)</strong> 須通知對方確切地址（FRA T1/T2/機場附近 RV park）</li>
+                        <li>📌 還車地點同樣 <strong>6/30 前</strong>通知確切地址</li>
+                        <li>💳 帶信用卡刷保證金 €1,500</li>
+                        <li>📋 拍下交車狀態照片（外觀 4 面、儀表板、油表、輪胎、內裝）→ 保留證據</li>
+                        <li>📞 拿到 <strong>24h 緊急電話</strong>、<strong>Allianz 救援卡</strong>位置</li>
+                        <li>🔍 跟對方一起填 <strong>completion certificate</strong> (條款 IV)，保留副本</li>
+                    </ol>
                 </div>
 
                 <!-- 加油攻略 -->
@@ -720,9 +804,9 @@
                         </thead>
                         <tbody>
                             <tr class="row-base-1">
-                                <td><strong>7/4 (六) 取車後</strong></td>
-                                <td>Frankfurt 機場 / 出城</td>
-                                <td>確認油表 — 通常滿油交車，若非滿油請在 A3/A6 上加滿。</td>
+                                <td><strong>7/3 (五) 取車當下</strong></td>
+                                <td>Frankfurt 取車點</td>
+                                <td>合約承諾<strong>滿油交車</strong>，確認油表 = F；若非滿油拍照存證 + 馬上反映。</td>
                                 <td class="text-[color:var(--ink-soft)]">確認</td>
                             </tr>
                             <tr class="row-base-1">
@@ -738,15 +822,15 @@
                                 <td class="text-[color:var(--accent)] font-semibold">必加 2️⃣</td>
                             </tr>
                             <tr class="row-base-3">
-                                <td><strong>7/13 (一) Europa-Park 出來時 ⛽</strong></td>
-                                <td>Rust / Lahr 附近 (德國境內)</td>
-                                <td>樂園在德國境內，順道在德國加油較便宜。為 7/14 還車前累積里程做準備。</td>
-                                <td class="text-[color:var(--accent-warm)] font-semibold">建議</td>
+                                <td><strong>7/13 (一) Europa-Park → FRA 途中 ⛽</strong></td>
+                                <td>Rust 出來後 A5 高速上加油站 (德國境內)</td>
+                                <td>從 Rust 到 FRA 約 200km，油表足夠則 7/14 再加。德國油價比法國便宜，可順道加滿減少 7/14 早上時間壓力。</td>
+                                <td class="text-[color:var(--accent-warm)] font-semibold">可選</td>
                             </tr>
                             <tr class="row-highlight">
-                                <td><strong>還車當天 ⛽⛽<br><span class="font-normal text-xs text-[color:var(--ink-soft)]">(報價 7/13 / 行程 7/14)</span></strong></td>
-                                <td>Frankfurt 機場附近最後一個加油站</td>
-                                <td><strong class="text-[color:var(--accent)]">租車公司通常要求滿油還車</strong>，否則收高額補油費。在還車地點 5-10 km 內加滿油保留收據。</td>
+                                <td><strong>7/14 (二) 還車前 ⛽⛽<br><span class="font-normal text-xs text-[color:var(--ink-soft)]">時間：07:30 前</span></strong></td>
+                                <td>Frankfurt 機場附近最後一個加油站 (Aral / Shell)</td>
+                                <td><strong class="text-[color:var(--accent)]">合約明定「滿油還車」(Article V-d)</strong>，否則扣保證金。在還車地點 5km 內加滿，保留收據。<strong>時間極緊：11:15 起飛 → 8:00 必須報到。</strong></td>
                                 <td class="text-[color:var(--accent)] font-semibold">必加 3️⃣</td>
                             </tr>
                         </tbody>
