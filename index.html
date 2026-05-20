@@ -309,6 +309,11 @@
                         <span class="tab-label">露營車</span>
                         <span class="tab-tag">Tab 6</span>
                     </button>
+                    <button data-tab="prep" class="tab-btn">
+                        <span class="tab-icon">🎒</span>
+                        <span class="tab-label">行前準備</span>
+                        <span class="tab-tag">Tab 7</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -1159,6 +1164,149 @@
                 </div>
             </section>
             <!-- ====== /Panel: 露營車 ====== -->
+
+            <!-- ====== Panel: 行前準備 ====== -->
+            <section id="panel-prep" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Preparazione · Before Departure</p>
+                <h2 class="section-title mt-1 mb-6">🎒 行前準備</h2>
+
+                <!-- ───────── 上網方案 ───────── -->
+                <p class="section-eyebrow mb-1">Connettività · 上網方案</p>
+                <h3 class="text-xl font-semibold text-[color:var(--coffee)] mb-3">📶 網路怎麼選</h3>
+
+                <!-- 情境特點 -->
+                <div class="soft-card p-5 mb-5" style="background: var(--paper-3); border: 1px solid var(--paper-5);">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-2">Contesto · 為什麼一般漫遊不夠</p>
+                    <ul class="text-sm text-[color:var(--coffee-soft)] space-y-1 list-disc list-inside">
+                        <li><strong>4 大 1 小</strong>，至少 4 支手機 + 小孩平板要上網</li>
+                        <li><strong>主駕全程 Google Maps 導航</strong>，不能斷網</li>
+                        <li><strong>7/5 Challenge Roth 比賽日</strong>：人潮密集，網路會被擠爆，主辦追蹤頁 + 家人傳訊全靠它</li>
+                        <li><strong>露營區 WiFi 通常很爛</strong>（要錢、限時、低速）→ 不能依賴</li>
+                        <li><strong>Adria Matrix 沒原廠 4G WiFi router</strong>（合約附件 #1 沒列）</li>
+                    </ul>
+                </div>
+
+                <!-- 四種方案比較 -->
+                <p class="section-eyebrow mb-1">Opzioni · 四種方案</p>
+                <div class="overflow-x-auto mb-5">
+                    <table class="schedule-table w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th>方案</th>
+                                <th>總價（12 天）</th>
+                                <th>適合</th>
+                                <th>缺點</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>台灣電信漫遊</strong><br><span class="text-xs text-[color:var(--ink-soft)]">中華 / 台哥 / 遠傳</span></td>
+                                <td><strong class="text-[color:var(--accent)]">~NT$24,000</strong><br><span class="text-xs">NT$6,000/人 × 4</span></td>
+                                <td>怕麻煩、要保留原號碼</td>
+                                <td><strong>最貴</strong>、熱點常被限速</td>
+                            </tr>
+                            <tr>
+                                <td><strong>eSIM</strong><br><span class="text-xs text-[color:var(--ink-soft)]">Airalo / Saily / Holafly</span></td>
+                                <td>~NT$2,000-4,000/人</td>
+                                <td>iPhone XS+ / Pixel 3+ / 新 Samsung</td>
+                                <td>不能換機；Holafly 不能熱點</td>
+                            </tr>
+                            <tr>
+                                <td><strong>德國實體 SIM</strong><br><span class="text-xs text-[color:var(--ink-soft)]">O2 / Vodafone / ALDI Talk</span></td>
+                                <td>~NT$500-1,000/張</td>
+                                <td>想極致省</td>
+                                <td>要 ID 註冊、機場排隊、不會德文難</td>
+                            </tr>
+                            <tr style="background: #E8F0DE;">
+                                <td><strong class="text-[#4F7236]">✓ Pocket WiFi（台灣租）</strong><br><span class="text-xs text-[color:var(--ink-soft)]">飛買家 / WiHo / Global WiFi</span></td>
+                                <td><strong class="text-[#4F7236]">~NT$3,000 整團共用</strong><br><span class="text-xs">NT$250/天 × 12</span></td>
+                                <td><strong>4 人共用最划算</strong></td>
+                                <td>多帶一台機、每天要充電</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 推薦組合 -->
+                <div class="callout callout-info mb-5" style="background: #E2EAD8; border-color: #6B8E4E;">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Raccomandazione · 推薦組合</p>
+                    <p class="font-semibold text-[color:var(--coffee)] mb-2">✅ Pocket WiFi（全車共用）+ 駕駛 eSIM + 備用德國 SIM</p>
+                    <div class="grid md:grid-cols-3 gap-3 mt-3">
+                        <div class="soft-card p-3" style="background: var(--paper-2);">
+                            <p class="font-semibold text-[color:var(--coffee)] text-sm mb-1">🛜 主：Pocket WiFi</p>
+                            <p class="text-xs text-[color:var(--ink-soft)] leading-relaxed">出發前在台灣租歐洲方案，FRA 機場領取/歸還。整團共用，~NT$3,000，5-10 台裝置同連。</p>
+                        </div>
+                        <div class="soft-card p-3" style="background: var(--paper-2);">
+                            <p class="font-semibold text-[color:var(--coffee)] text-sm mb-1">📲 副：駕駛 eSIM</p>
+                            <p class="text-xs text-[color:var(--ink-soft)] leading-relaxed">主駕另加一張 eSIM 約 NT$2,000，避免 WiFi 沒電/故障/比賽日塞網時導航斷線。<strong>Airalo Eurolink 20GB</strong> 或 <strong>Saily Europe 30GB</strong>。</p>
+                        </div>
+                        <div class="soft-card p-3" style="background: var(--paper-2);">
+                            <p class="font-semibold text-[color:var(--coffee)] text-sm mb-1">🆘 備：德國實體 SIM</p>
+                            <p class="text-xs text-[color:var(--ink-soft)] leading-relaxed">抵達 FRA 後，REWE / 機場便利店買一張 <strong>O2 / Vodafone €15 預付卡</strong>，當 emergency backup。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 行前 → 出發當天 Timeline -->
+                <p class="section-eyebrow mb-1">Cronologia · 執行時程</p>
+                <div class="overflow-x-auto mb-5">
+                    <table class="schedule-table w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th>時間點</th>
+                                <th>動作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>出發前 1-2 週</strong></td>
+                                <td>
+                                    1. 上 <a href="https://www.travelwifi.com.tw/" target="_blank" rel="noopener noreferrer" class="lk">飛買家</a> / <a href="https://www.telecomsquare.tw/" target="_blank" rel="noopener noreferrer" class="lk">WiHo</a> 訂歐洲 Pocket WiFi（指定 7/3 FRA 領、7/14 FRA 還）<br>
+                                    2. 主駕在 <a href="https://www.airalo.com/" target="_blank" rel="noopener noreferrer" class="lk">Airalo</a> / <a href="https://saily.com/" target="_blank" rel="noopener noreferrer" class="lk">Saily</a> 買 eSIM（不啟用，落地再開）
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>登機前一晚</strong></td>
+                                <td>把 Pocket WiFi 充飽電；確認 eSIM QR Code 已存到手機相簿</td>
+                            </tr>
+                            <tr>
+                                <td><strong>7/3 抵達 FRA T3</strong></td>
+                                <td>
+                                    1. 拿 Pocket WiFi（若機場領取）<br>
+                                    2. 啟用主駕 eSIM<br>
+                                    3. 行有餘力到 T1 REWE / 便利店買一張 €15 預付卡備用
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>每日露營</strong></td>
+                                <td>Pocket WiFi 插 RV 230V 充電（露營區有電力時）；行駛中用 12V 補</td>
+                            </tr>
+                            <tr style="background: var(--paper-3);">
+                                <td><strong class="text-[color:var(--accent)]">7/5 比賽日</strong></td>
+                                <td>主駕 eSIM 給家人傳定位；Pocket WiFi 供其他人滑社群、追蹤選手</td>
+                            </tr>
+                            <tr>
+                                <td><strong>7/14 還車後</strong></td>
+                                <td>FRA 機場歸還 Pocket WiFi；eSIM 自動到期</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 小提醒 -->
+                <div class="callout mb-6" style="background: #F5EFE0; border-left: 4px solid #C7A66B; border-radius: 6px; padding: 1rem 1.25rem;">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Note · 小提醒</p>
+                    <ul class="text-sm text-[color:var(--coffee-soft)] space-y-1 list-disc list-inside">
+                        <li><strong>德國 + 法國</strong>都是 EU 漫遊免費區，買「EU 全區」方案即可</li>
+                        <li><strong>奧地利 / 瑞士</strong>本行程不去（vignette 含在合約內，但路線沒安排），eSIM 不用挑含瑞奧的</li>
+                        <li><strong>小孩平板</strong>連 Pocket WiFi 即可，不必單獨方案</li>
+                        <li><strong>iPhone 雙 SIM</strong>：主號保留台灣 SIM 收簡訊驗證碼，副卡裝 eSIM 跑數據，最完整</li>
+                        <li><strong>歐盟漫遊 (Roam Like at Home)</strong>：在 EU 國家買的 SIM，跨 EU 國免費漫遊，所以買德國 SIM 在法國也通</li>
+                    </ul>
+                </div>
+
+            </section>
+            <!-- ====== /Panel: 行前準備 ====== -->
 
         </main>
 
