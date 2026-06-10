@@ -250,6 +250,219 @@
             .tab-btn .tab-icon { font-size: 16px; }
             .tab-btn .tab-label { font-size: 11px; }
         }
+
+        /* ───────── Checklist styles ───────── */
+        .checklist-controls {
+            position: sticky;
+            top: 0;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px -4px rgba(44, 36, 25, 0.15);
+            z-index: 10;
+        }
+        .checklist-progress-overall {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .progress-bar {
+            flex: 1;
+            min-width: 120px;
+            height: 8px;
+            background: var(--paper-3);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6B8E4E, #4F7236);
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+        .checklist-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .checklist-btn {
+            background: var(--paper-2);
+            color: var(--coffee);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .checklist-btn:hover {
+            background: var(--paper-3);
+        }
+        .checklist-btn-danger:hover {
+            background: #F4E0D7;
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .checklist-section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin: 32px 0 16px;
+        }
+        .checklist-section-general {
+            background: var(--paper-3);
+            border-left: 6px solid #8B7355;
+        }
+        .checklist-section-tri {
+            background: #E8F0DE;
+            border-left: 6px solid #6B8E4E;
+        }
+        .checklist-section-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--coffee);
+            margin: 0;
+            flex: 1;
+        }
+        .checklist-section-header .section-count {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--ink-soft);
+        }
+
+        details.subcat {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        details.subcat[open] {
+            box-shadow: 0 2px 8px -4px rgba(44, 36, 25, 0.1);
+        }
+        details.subcat > summary {
+            padding: 14px 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            user-select: none;
+            background: var(--paper-2);
+        }
+        details.subcat > summary::-webkit-details-marker { display: none; }
+        details.subcat > summary::before {
+            content: "▸";
+            color: var(--ink-soft);
+            transition: transform 0.2s ease;
+            display: inline-block;
+            font-size: 12px;
+        }
+        details.subcat[open] > summary::before {
+            transform: rotate(90deg);
+        }
+        details.subcat .subcat-icon { font-size: 18px; }
+        details.subcat .subcat-title {
+            flex: 1;
+            font-weight: 600;
+            color: var(--coffee);
+            font-size: 0.95rem;
+        }
+        details.subcat .subcat-progress {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            white-space: nowrap;
+        }
+        details.subcat .subcat-bar {
+            width: 60px;
+            height: 4px;
+            background: var(--paper-4);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        details.subcat .subcat-bar-fill {
+            height: 100%;
+            background: #6B8E4E;
+            transition: width 0.3s ease;
+        }
+        details.subcat .subcat-items {
+            padding: 8px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 18px;
+            cursor: pointer;
+            transition: background 0.1s;
+        }
+        .checklist-item:hover { background: var(--paper-2); }
+        .checklist-item input[type="checkbox"] {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #6B8E4E;
+            flex-shrink: 0;
+        }
+        .check-text {
+            flex: 1;
+            font-size: 0.9rem;
+            color: var(--coffee-soft);
+            line-height: 1.5;
+        }
+        .checklist-item input[type="checkbox"]:checked ~ .check-text {
+            text-decoration: line-through;
+            color: var(--ink-faint);
+        }
+        .check-tag {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .check-tag-critical { background: #F4E0D7; color: var(--accent); }
+        .check-tag-tip { background: #E8F0DE; color: #4F7236; }
+
+        /* Print styles */
+        @media print {
+            body { padding: 0; background: #fff; }
+            nav, .checklist-controls, footer, header { display: none !important; }
+            [data-tab-panel]:not(#panel-checklist) { display: none !important; }
+            #panel-checklist { display: block !important; }
+            .paper-card { box-shadow: none; border: none; padding: 0; }
+            details.subcat[open], details.subcat { box-shadow: none; page-break-inside: avoid; }
+            details.subcat > summary::before { display: none; }
+            details.subcat .subcat-bar { display: none; }
+            details.subcat .subcat-items { display: block !important; }
+            details.subcat { background: #fff; border: 1px solid #999; margin-bottom: 8px; }
+            details.subcat > summary { background: #f5f5f5; }
+            .checklist-item input[type="checkbox"] { display: none; }
+            .checklist-item::before {
+                content: "☐";
+                font-size: 16px;
+                margin-right: 6px;
+                color: #333;
+            }
+            .checklist-item.is-checked::before { content: "☑"; }
+            .check-text { color: #000; }
+            .checklist-item.is-checked .check-text { text-decoration: line-through; color: #666; }
+            .checklist-section-header { background: #f0f0f0 !important; border-left: 6px solid #555 !important; }
+            @page { margin: 1.5cm; }
+        }
     </style>
 </head>
 <body class="min-h-screen p-4 md:p-8">
@@ -313,6 +526,11 @@
                         <span class="tab-icon">🎒</span>
                         <span class="tab-label">行前準備</span>
                         <span class="tab-tag">Tab 7</span>
+                    </button>
+                    <button data-tab="checklist" class="tab-btn">
+                        <span class="tab-icon">📋</span>
+                        <span class="tab-label">行前清單</span>
+                        <span class="tab-tag">Tab 8</span>
                     </button>
                 </div>
             </div>
@@ -910,6 +1128,43 @@
                         <a href="https://www.frankfurt-airport.com/en/airport-guide/at-the-airport/terminal-3.html" target="_blank" rel="noopener noreferrer" class="pill-link">🛬 FRA Terminal 3</a>
                         <a href="https://www.frankfurt-airport.com/en/travel/parking/long-distance-buses.html" target="_blank" rel="noopener noreferrer" class="pill-link">🚌 P36 長途巴士區</a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Hugo-Eckener-Ring+60549+Frankfurt+am+Main" target="_blank" rel="noopener noreferrer" class="pill-link">📍 P36 Google Maps</a>
+                    </div>
+                </div>
+
+                <!-- 7/3 FRA -> Roth 行車計畫（休息站 x 採買整合） -->
+                <div class="callout mb-6" style="background: #FDF3E7; border-left: 4px solid #C96F4A; border-radius: 6px; padding: 1rem 1.25rem;">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">In Viaggio · 7/3 FRA → Roth 行車計畫</p>
+                    <p class="font-semibold text-[color:var(--coffee)] mb-3">🚐 紅眼落地 + 2.5h 車程 = 賽前最大風險段，照表操課不硬撐</p>
+
+                    <div class="text-sm text-[color:var(--coffee-soft)] leading-relaxed space-y-2">
+                        <p><strong>⏱️ 時間軸：</strong>06:50 落地 → 08:30 行李 + bike box → 09:00 P36 交車（約 45 分）→ <strong>09:45–10:00 出發</strong>（A3 往 Würzburg/Nürnberg，全程約 230km）</p>
+
+                        <p><strong>☕ Stop 1（視狀況停）· 出發後 35–40 分：</strong>Raststätte <strong>Spessart / Rohrbrunn</strong>（A3 km 377）— 取車後第一次系統檢查：儀表警示、後視鏡、行李/單車固定、買咖啡。開起來順就直接跳過去 Stop 2。</p>
+
+                        <p><strong>🧘 Stop 2（主要休息）· 約 75–80 分 · 中點：</strong>Raststätte <strong>Haidt</strong>（A3 km 452，Kitzingen 附近，加油站+餐廳+充電）— 停 20–30 分：伸展、小孩放風、補咖啡點心。<span class="text-[color:var(--accent)]">這裡離 Roth 剩約 75 分。</span></p>
+
+                        <p><strong>🛒 12:45–13:15 抵 Kaufland Roth</strong>（Friedrich-Wambsganz-Str. 1 · 週五開到 20:00）— 按「採買攻略」清單一次買足 60–90 分，dm / OBI 同趟順路補。</p>
+
+                        <p><strong>🏕️ ~15:00 進官方露營區</strong> check-in → 接電/裝水/鋪床 → 簡單晚餐 → <strong>20:00 前熄燈</strong>（德國 20:00 = 台灣凌晨 2:00，順著台灣作息睡，不要硬撐到當地晚上）。</p>
+                    </div>
+
+                    <div class="mt-3 pt-3 border-t border-[color:var(--paper-5)] text-sm text-[color:var(--coffee-soft)]">
+                        <p class="font-semibold text-[color:var(--accent)] mb-1">🛡️ 疲勞駕駛守則（14hr 紅眼後第一次開 7.4m 車）：</p>
+                        <ul class="list-disc list-inside space-y-1 ml-1">
+                            <li>每 <strong>60–75 分鐘必停</strong>，不論體感多好</li>
+                            <li>副駕不睡覺：導航 + 聊天 + 觀察駕駛眼神，發現點頭立刻喊停</li>
+                            <li>真的撐不住 → 休息站直接<strong>車上小睡 20 分</strong>（床就在後面，露營車的特權）；營地全天可入住，完全不用趕</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-3 pt-3 border-t border-[color:var(--paper-5)] text-sm text-[color:var(--coffee-soft)]">
+                        <p class="font-semibold mb-1">🆘 Plan B（累爆版）：</p>
+                        <p>落地後狀態很差 → 先在 <strong>REWE The Squaire</strong>（FRA，開到 23:00）買當晚食物 → 直奔營地，Haidt 只當廁所停 → 7/4 早上再去 Kaufland 完整採買。賽前 48 小時，<strong>睡眠 &gt; 行程效率</strong>。</p>
+                    </div>
+
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Raststätte+Haidt+Nord+A3" target="_blank" rel="noopener noreferrer" class="pill-link">📍 Raststätte Haidt</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Kaufland+Roth+Friedrich-Wambsganz-Straße" target="_blank" rel="noopener noreferrer" class="pill-link">📍 Kaufland Roth</a>
                     </div>
                 </div>
 
@@ -1553,6 +1808,350 @@
             </section>
             <!-- ====== /Panel: 行前準備 ====== -->
 
+            <!-- ====== Panel: 行前清單 ====== -->
+            <section id="panel-checklist" data-tab-panel class="hidden">
+                <p class="section-eyebrow">Checklist · Pre-Departure</p>
+                <h2 class="section-title mt-1 mb-4">📋 行前清單</h2>
+                <p class="text-sm text-[color:var(--ink-soft)] mb-4">勾選會自動存在瀏覽器,重開頁面仍在。<span class="font-serif-it italic">🔥 = 關鍵 / 💡 = 加分項</span></p>
+
+                <!-- ───── Sticky 控制列 ───── -->
+                <div class="checklist-controls">
+                    <div class="checklist-progress-overall">
+                        <span class="font-semibold text-[color:var(--coffee)]" style="font-size: 0.95rem;">總進度</span>
+                        <div class="progress-bar"><div class="progress-bar-fill" id="overall-bar-fill" style="width: 0%"></div></div>
+                        <span class="font-serif-it italic" id="overall-count" style="color: var(--ink-soft); white-space: nowrap;">0 / 0</span>
+                    </div>
+                    <div class="checklist-buttons">
+                        <button class="checklist-btn" onclick="window.print()">🖨️ 列印 / PDF</button>
+                        <button class="checklist-btn" id="btn-expand-all">📂 全部展開</button>
+                        <button class="checklist-btn" id="btn-collapse-all">📁 全部收合</button>
+                        <button class="checklist-btn checklist-btn-danger" id="btn-reset">↺ 全部重置</button>
+                    </div>
+                </div>
+
+                <!-- ════════════════════════════════════════════════════════ -->
+                <!-- ════════════════ A. 旅行一般用 ═════════════════════════ -->
+                <!-- ════════════════════════════════════════════════════════ -->
+                <div class="checklist-section-header checklist-section-general">
+                    <span style="font-size: 1.75rem;">🧳</span>
+                    <h3>A · 旅行一般用</h3>
+                    <span class="section-count" id="section-count-general">0 / 0</span>
+                </div>
+
+                <!-- A1 證件鋢包 -->
+                <details class="subcat" open data-subcat="general-passport">
+                    <summary>
+                        <span class="subcat-icon">🛂</span>
+                        <span class="subcat-title">證件鋢包</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-1"><span class="check-text">護照 × 4(確認效期到 2027/1/15 之後,有效期需 ≥ 6 個月)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-2"><span class="check-text">護照影本 × 4(紙本 + 雲端 Google Drive 各一份)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-3"><span class="check-text">CI061/CI062 機票電子檔列印 + 手機 PDF</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-4"><span class="check-text">台灣駕照 + 國際駕照(IDP,監理所辦)— 主駕、副駕都要</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-5"><span class="check-text">信用卡 × 2(主+備,確認海外無鎖卡,通知銀行海外消費)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-6"><span class="check-text">歐元現金 €300–500(露營區/小店常只收現金或無 WiFi 刷卡)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-7"><span class="check-text">健保卡(回台緊急就醫核退用)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-8"><span class="check-text">小孩戶口名簿影本(萬一需要證明親子關係)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-9"><span class="check-text">旅遊保險保單 PDF + 24h 救援電話</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-pas-10"><span class="check-text">證件夾 / 護照套(防潑水)</span><span class="check-tag check-tag-tip">💡</span></label>
+                    </div>
+                </details>
+
+                <!-- A2 電子裝置 -->
+                <details class="subcat" open data-subcat="general-electronics">
+                    <summary>
+                        <span class="subcat-icon">📱</span>
+                        <span class="subcat-title">電子裝置</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-1"><span class="check-text">4 支手機 + 各自充電線</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-2"><span class="check-text">小孩平板 × 1–2(下載離線影片、App)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-3"><span class="check-text">Type F 歐規轉接頭 × 3(雙孔以上)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-4"><span class="check-text">行動電源 × 2(20,000 mAh,符合飛機規定 ≤ 100Wh)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-5"><span class="check-text">Pocket WiFi(7/3 FRA 領取憑證)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-6"><span class="check-text">主駕 eSIM QR Code(已存手機相簿)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-7"><span class="check-text">Google Maps / Apple Maps 德/法整區離線地圖已下載</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-8"><span class="check-text">USB-A 3 孔多功能 charger(同時充 4 機)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-9"><span class="check-text">相機 + 記憶卡 + 充電器(若不靠手機)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-10"><span class="check-text">耳機 / AirPods(長途飛機)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-ele-11"><span class="check-text">RV 內部 12V → USB / 110V 變壓器(以防 RV 不齊)</span><span class="check-tag check-tag-tip">💡</span></label>
+                    </div>
+                </details>
+
+                <!-- A3 衣物 -->
+                <details class="subcat" open data-subcat="general-clothing">
+                    <summary>
+                        <span class="subcat-icon">👕</span>
+                        <span class="subcat-title">衣物(4 人 × 12 天,Roth 15-27°C)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-1"><span class="check-text">上衣 × 5–6(可洗 → 約一週一輪)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-2"><span class="check-text">褲子 × 3(長 × 2 + 短 × 1)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-3"><span class="check-text">內衣褲 × 7 套(露營區洗烘需時)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-4"><span class="check-text">襪子 × 7 雙</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-5"><span class="check-text">輕量羽絨 / 軟殼外套(早晚溫差,Schwarzwald 山區涼)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-6"><span class="check-text">防水雨衣 / 風雨衣(德國夏季陣雨多)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-7"><span class="check-text">帽子(防曬+保暖各一)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-8"><span class="check-text">太陽眼鏡(主駕 + 自己賽日)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-9"><span class="check-text">夾腳拖 / 涼鞋(露營區 + 沖澡用)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-10"><span class="check-text">輕便運動鞋(逛街、散步用,跟比賽用分開)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-11"><span class="check-text">泳衣 / 泳褲(全家 — Schwarzwald 湖區、營區泳池)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-clo-12"><span class="check-text">睡衣 × 2</span></label>
+                    </div>
+                </details>
+
+                <!-- A4 盥洗藥品 -->
+                <details class="subcat" open data-subcat="general-toiletries">
+                    <summary>
+                        <span class="subcat-icon">🧴</span>
+                        <span class="subcat-title">盥洗藥品</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-1"><span class="check-text">洗髮精 / 沐浴乳(露營區通常不附)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-2"><span class="check-text">牙刷 × 4 + 牙膏 × 2</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-3"><span class="check-text">毛巾 × 4(快乾型,德國露營區不附)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-4"><span class="check-text">高係數防曬乳 SPF 50+(賽日 + 平日)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-5"><span class="check-text">護唇膏(高 SPF)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-6"><span class="check-text">蚊蟲噴霧 / 萬金油 / 蚊蟲叮咬藥膏</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-7"><span class="check-text">普拿疼 / 退燒藥 / 兒童退燒水</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-8"><span class="check-text">腸胃藥(止瀉、整腸、消脹氣)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-9"><span class="check-text">過敏藥 / 抗組織胺</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-10"><span class="check-text">OK 繃、紗布、消毒酒精棉片</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-11"><span class="check-text">個人慢性病用藥(含處方箋影本)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-12"><span class="check-text">指甲剪 + 棉花棒 + 護手霜</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-toi-13"><span class="check-text">隱形眼鏡 / 眼鏡備用(若有戴)</span></label>
+                    </div>
+                </details>
+
+                <!-- A5 小孩專屬 -->
+                <details class="subcat" open data-subcat="general-kids">
+                    <summary>
+                        <span class="subcat-icon">🧒</span>
+                        <span class="subcat-title">小孩專屬(4 歲 + 8 歲)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-1"><span class="check-text">4 歲兒童安全座椅(RV 是否提供?未提供需自備或預約)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-2"><span class="check-text">8 歲增高墊(歐盟法規 ≤ 135cm 必須)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-3"><span class="check-text">小孩安撫物(布偶、毯子)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-4"><span class="check-text">小孩零食(蘇打餅、海苔、果乾 — 長途車程用)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-5"><span class="check-text">小孩水壺 × 2</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-6"><span class="check-text">平板下載卡通 / 影片 / 學習 App(離線可用)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-7"><span class="check-text">小孩用藥(退燒、止咳、感冒糖漿)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-8"><span class="check-text">玩具:小本繪本、貼紙簿、樂高小盒(車上、餐廳)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-9"><span class="check-text">濕紙巾 + 小毛巾(隨身包永遠要有)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-10"><span class="check-text">小型背包(讓小孩自己揹外套水壺,訓練責任感)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-kid-11"><span class="check-text">嘔吐袋 × 5(暈車備用)</span><span class="check-tag check-tag-tip">💡</span></label>
+                    </div>
+                </details>
+
+                <!-- A6 露營裝備 -->
+                <details class="subcat" open data-subcat="general-camping">
+                    <summary>
+                        <span class="subcat-icon">⛺</span>
+                        <span class="subcat-title">露營裝備</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-1"><span class="check-text">頭燈 × 2(夜間 RV 內找東西、廁所路上)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-2"><span class="check-text">浴室拖鞋 × 4(共用浴室必備)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-3"><span class="check-text">小型曬衣繩 + 曬衣夾 × 10</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-4"><span class="check-text">摺疊水盆 / 大塑膠袋(濕泳衣、髒衣分裝)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-5"><span class="check-text">保溫瓶 × 2(早咖啡 + 小孩熱牛奶)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-6"><span class="check-text">水壺 × 4</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-7"><span class="check-text">摺疊購物袋 × 2(超市買菜)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-8"><span class="check-text">膠帶 / 束帶 / 小工具組(臨時修理)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-9"><span class="check-text">小垃圾袋 × 一卷</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-10"><span class="check-text">RV 投幣式洗衣需要的 €1 硬幣零錢包</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-cam-11"><span class="check-text">小毛毯 × 2(夜間山區降溫)</span></label>
+                    </div>
+                </details>
+
+                <!-- A7 文件副本 -->
+                <details class="subcat" open data-subcat="general-docs">
+                    <summary>
+                        <span class="subcat-icon">📄</span>
+                        <span class="subcat-title">文件副本(紙本 + 雲端)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-1"><span class="check-text">CI061/CI062 訂位代號 + e-ticket PDF</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-2"><span class="check-text">Adria Matrix RV 租賃合約 + 取/還車時間</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-3"><span class="check-text">各營地預約確認信(11 晚)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-4"><span class="check-text">旅遊保險保單 + 24h 救援電話</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-5"><span class="check-text">Challenge Roth 報名確認信 / Athlete Guide</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-6"><span class="check-text">緊急聯絡表(家人、台灣銀行客服、信用卡 24h 卡片掛失)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-7"><span class="check-text">大舜哥機場接送預約確認</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="g-doc-8"><span class="check-text">回程班機 check-in 24h 前提醒設好</span><span class="check-tag check-tag-tip">💡</span></label>
+                    </div>
+                </details>
+
+                <!-- ════════════════════════════════════════════════════════ -->
+                <!-- ════════════════ B. 三鐵比賽 ═══════════════════════════ -->
+                <!-- ════════════════════════════════════════════════════════ -->
+                <div class="checklist-section-header checklist-section-tri">
+                    <span style="font-size: 1.75rem;">🏊‍♂️🚴‍♂️🏃‍♂️</span>
+                    <h3>B · Challenge Roth 7/5</h3>
+                    <span class="section-count" id="section-count-tri">0 / 0</span>
+                </div>
+
+                <!-- B1 台灣出發前 -->
+                <details class="subcat" open data-subcat="tri-tw">
+                    <summary>
+                        <span class="subcat-icon">🇹🇼</span>
+                        <span class="subcat-title">台灣出發前(~ 7/1)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-1"><span class="check-text">心電圖檢查完成(賽前 1-2 週,鐵人三項猝死頭號預防)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-2"><span class="check-text">Challenge Roth 報名確認信印好</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-3"><span class="check-text">CTTA 註冊證(若需要 — 確認 Athlete Guide)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-4"><span class="check-text">三鐵保險已加保(一般旅平險不含游泳/騎車競賽)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-5"><span class="check-text">自行車裝箱完成(輪組保護、踏板拆下、變速線鬆放)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-6"><span class="check-text">Bike box 內附:備胎 × 2、補胎片、CO2 × 2、打氣筒、工具組</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-7"><span class="check-text">安全帽 + 車鞋 + 卡踏(可裝箱省空間)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-8"><span class="check-text">Tri-suit × 1(可備一件副)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-9"><span class="check-text">Wetsuit(若預期水溫 ≤ 24.5°C — 帶上去保險,Roth 多年都在邊緣)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-10"><span class="check-text">Swim skin(若水溫 > 24.5°C 禁穿 wetsuit,2025 年用上了)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-11"><span class="check-text">蛙鏡 × 2 副(亮+陰,賽日視天氣換)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-12"><span class="check-text">主辦提供的泳帽(看 Athlete Guide,若需要會在 Race Pack)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-13"><span class="check-text">跑鞋 × 1 雙(已習慣,別買新的)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-14"><span class="check-text">跑襪 × 2 雙</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-15"><span class="check-text">Garmin / 心率帶 / 功率計 + 各自充電線</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-16"><span class="check-text">功率計電池備用(CR2032 × 2)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-17"><span class="check-text">能量膠 / Maurten / Gu × 至少 8 個(賽日 + 訓練)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-18"><span class="check-text">電解質粉 / 鹽錠(歐洲品牌可能不熟,自備為主)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-19"><span class="check-text">Body Glide / 防摩膏(海鹽/汗水磨破)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-20"><span class="check-text">號碼帶 / Race Belt(自備一條,主辦發的常太薄)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-tw-21"><span class="check-text">小型按摩球 / 滾筒(住宿可用)</span><span class="check-tag check-tag-tip">💡</span></label>
+                    </div>
+                </details>
+
+                <!-- B2 抵達德國 -->
+                <details class="subcat" open data-subcat="tri-arrive">
+                    <summary>
+                        <span class="subcat-icon">🇩🇪</span>
+                        <span class="subcat-title">抵達德國(7/3 落地起)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-1"><span class="check-text">FRA 領取 bike box,當場開箱檢查車架/輪組是否完整無損</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-2"><span class="check-text">若有運送損壞 → 機場航空公司櫃台立刻申訴並拍照存證</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-3"><span class="check-text">FRA T1 領取 Pocket WiFi</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-4"><span class="check-text">主駕 eSIM 啟用,確認導航能跑</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-5"><span class="check-text">RV 取車後當天在停車場試組裝自行車(找問題還有時間)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-6"><span class="check-text">調整變速、煞車、卡踏確認 — 試騎 10 分鐘</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-7"><span class="check-text">找好 Roth 附近單車店(Roth 是車友天堂,工具/零件齊全)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-ar-8"><span class="check-text">調整時差:落地當天白天不要睡,撐到當地晚上 22:00</span><span class="check-tag check-tag-critical">🔥</span></label>
+                    </div>
+                </details>
+
+                <!-- B3 賽前 3 天 -->
+                <details class="subcat" open data-subcat="tri-prep">
+                    <summary>
+                        <span class="subcat-icon">📋</span>
+                        <span class="subcat-title">賽前 3 天(7/2 → 7/4)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-1"><span class="check-text">前往 Roth Expo 報到領取 Race Pack(時間請看 Athlete Guide)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-2"><span class="check-text">當場核對:Bib 號碼帶、計時晶片、車貼、安全帽貼、轉換袋(藍/紅)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-3"><span class="check-text">出席 Athlete Briefing(英文場通常週六)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-4"><span class="check-text">確認比賽當日水溫公告(看 wetsuit 是否合法)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-5"><span class="check-text">試騎部分 bike course(尤其 Solar Hill 爬坡段)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-6"><span class="check-text">試泳 Main-Donau-Kanal(Race Briefing 前後通常開放)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-7"><span class="check-text">7/4 下午 Bike Check-in(把車停進 Transition Area,時間照公告)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-8"><span class="check-text">Bike Check-in 前:輪胎打氣到目標 PSI(別過早,熱漲冷縮)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-9"><span class="check-text">車身水壺裝好(賽前一晚放冷凍庫,賽日清晨融成冰水)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-10"><span class="check-text">藍袋(swim → bike)+ 紅袋(bike → run)裝好,7/4 一起 check-in</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-11"><span class="check-text">賽日早餐演練 — 試吃,確認腸胃 OK(不要當天首次嘗試新食物)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-12"><span class="check-text">補給策略寫紙條貼車架:每 30 分一膠、每 15 分一口水、第 X km 鹽錠</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-13"><span class="check-text">7/4 晚 22:00 前就寢,鬧鐘設兩個(賽日清晨 ~03:30)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-pr-14"><span class="check-text">家人觀賽路線講清楚(集合點、補給站、衣物送達地)</span></label>
+                    </div>
+                </details>
+
+                <!-- B4 賽日早上 -->
+                <details class="subcat" open data-subcat="tri-raceday">
+                    <summary>
+                        <span class="subcat-icon">🌅</span>
+                        <span class="subcat-title">賽日早上(7/5)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-1"><span class="check-text">起床(預計 03:30,起跑前 3.5h)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-2"><span class="check-text">早餐固定組合:燕麥/麵包/香蕉/咖啡(賽前 3h)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-3"><span class="check-text">廁所(咖啡會幫忙)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-4"><span class="check-text">塗 Body Glide:脖子(wetsuit 磨)、腋下、大腿內、跨下</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-5"><span class="check-text">塗防曬乳(全身,別只塗臉)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-6"><span class="check-text">穿 tri-suit(下面不穿內褲)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-7"><span class="check-text">計時晶片綁腳踝(swim 也要綁)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-8"><span class="check-text">帶上:wetsuit / swim skin、蛙鏡 × 2、泳帽、Body Glide 小條</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-9"><span class="check-text">攜帶能量膠 × 1(賽前 15 分鐘吃)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-10"><span class="check-text">舊毛巾 / 拖鞋(走到 Swim Start 用,可丟)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-11"><span class="check-text">出門前看天氣,決定:wetsuit?太陽眼鏡明or陰?</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-12"><span class="check-text">家人:備好賽日 RV 早餐、相機/手機充飽、追蹤頁打開</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-rd-13"><span class="check-text">出發前自我默念:「配速、別衝、補給、笑一下」</span><span class="check-tag check-tag-tip">💡</span></label>
+                    </div>
+                </details>
+
+                <!-- B5 Transition Bag 對照 -->
+                <details class="subcat" open data-subcat="tri-bags">
+                    <summary>
+                        <span class="subcat-icon">🎒</span>
+                        <span class="subcat-title">Transition Bag 對照表(藍 / 紅)</span>
+                        <span class="subcat-bar"><span class="subcat-bar-fill"></span></span>
+                        <span class="subcat-progress">0 / 0</span>
+                    </summary>
+                    <div class="subcat-items">
+                        <p class="px-[18px] pt-2 pb-1 text-xs text-[color:var(--ink-soft)] font-serif-it italic">藍袋 · Swim → Bike</p>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-b1"><span class="check-text">藍袋:安全帽(扣帶向上方便戴)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-b2"><span class="check-text">藍袋:車鞋(已扣卡踏 = 飛上車式;放袋裡 = T1 換鞋式)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-b3"><span class="check-text">藍袋:太陽眼鏡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-b4"><span class="check-text">藍袋:號碼帶(背面朝後)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-b5"><span class="check-text">藍袋:車上補給(膠 × 3、鹽錠、能量棒備用)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-b6"><span class="check-text">藍袋:小毛巾(擦腳)</span><span class="check-tag check-tag-tip">💡</span></label>
+
+                        <p class="px-[18px] pt-3 pb-1 text-xs text-[color:var(--ink-soft)] font-serif-it italic">紅袋 · Bike → Run</p>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-r1"><span class="check-text">紅袋:跑鞋(鬆鞋帶 / 彈性鞋帶)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-r2"><span class="check-text">紅袋:跑襪(若用)</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-r3"><span class="check-text">紅袋:跑帽 / Visor(防曬)</span><span class="check-tag check-tag-critical">🔥</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-r4"><span class="check-text">紅袋:跑步補給腰包 + 能量膠 × 4</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-r5"><span class="check-text">紅袋:備用太陽眼鏡(若車上飛走了)</span><span class="check-tag check-tag-tip">💡</span></label>
+                        <label class="checklist-item"><input type="checkbox" data-key="t-bg-r6"><span class="check-text">紅袋:防曬乳補擦小條</span></label>
+                    </div>
+                </details>
+
+                <!-- 結尾提醒 -->
+                <div class="callout mt-6 mb-4" style="background: #F5EFE0; border-left: 4px solid #C7A66B; border-radius: 6px; padding: 1rem 1.25rem;">
+                    <p class="font-serif-it italic text-sm text-[color:var(--ink-soft)] mb-1">Note · 最後提醒</p>
+                    <ul class="text-sm text-[color:var(--coffee-soft)] space-y-1 list-disc list-inside">
+                        <li>離家前 1 小時最後巡查:護照 / 機票 / 信用卡 / 手機 / 鑰匙 / 大舜哥已聯絡</li>
+                        <li>水電瓦斯關閉、垃圾倒掉、冰箱清空</li>
+                        <li>賽日當天 Transition 不會讓你回去拿東西 — 7/4 check-in 前再三檢查</li>
+                        <li>遇問題保持冷靜:Roth 是世上最友善的鐵人賽,工作人員 + 觀眾都會幫忙</li>
+                    </ul>
+                </div>
+
+            </section>
+            <!-- ====== /Panel: 行前清單 ====== -->
+
         </main>
 
         <!-- Footer -->
@@ -1606,6 +2205,100 @@
             const initial = (location.hash || '#itinerary').slice(1);
             const valid = Array.from(tabs).some(b => b.dataset.tab === initial);
             setActive(valid ? initial : 'itinerary');
+        })();
+
+        /* ───────── Checklist behavior ───────── */
+        (function() {
+            const STORAGE_KEY = 'roth2026-checklist-v1';
+            const checkboxes = document.querySelectorAll('#panel-checklist input[type="checkbox"][data-key]');
+            if (!checkboxes.length) return;
+
+            // Load saved state
+            let state = {};
+            try {
+                state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+            } catch (e) { state = {}; }
+
+            function save() {
+                try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) {}
+            }
+
+            function updateProgress() {
+                // Per subcat
+                document.querySelectorAll('#panel-checklist details.subcat').forEach(d => {
+                    const boxes = d.querySelectorAll('input[type="checkbox"][data-key]');
+                    const total = boxes.length;
+                    const done = Array.from(boxes).filter(b => b.checked).length;
+                    const pctText = d.querySelector('.subcat-progress');
+                    const bar = d.querySelector('.subcat-bar-fill');
+                    if (pctText) pctText.textContent = done + ' / ' + total;
+                    if (bar) bar.style.width = (total ? (done/total*100).toFixed(0) : 0) + '%';
+                });
+                // Per section
+                ['general','tri'].forEach(name => {
+                    const subcats = document.querySelectorAll('#panel-checklist details.subcat[data-subcat^="' + name + '-"]');
+                    let total = 0, done = 0;
+                    subcats.forEach(d => {
+                        d.querySelectorAll('input[type="checkbox"][data-key]').forEach(b => {
+                            total++; if (b.checked) done++;
+                        });
+                    });
+                    const el = document.getElementById('section-count-' + name);
+                    if (el) el.textContent = done + ' / ' + total;
+                });
+                // Overall
+                const allTotal = checkboxes.length;
+                const allDone = Array.from(checkboxes).filter(b => b.checked).length;
+                const overall = document.getElementById('overall-count');
+                const overallBar = document.getElementById('overall-bar-fill');
+                if (overall) overall.textContent = allDone + ' / ' + allTotal;
+                if (overallBar) overallBar.style.width = (allTotal ? (allDone/allTotal*100).toFixed(0) : 0) + '%';
+            }
+
+            // Apply saved state + bind change handlers
+            checkboxes.forEach(box => {
+                const key = box.dataset.key;
+                if (state[key]) {
+                    box.checked = true;
+                    box.closest('.checklist-item').classList.add('is-checked');
+                }
+                box.addEventListener('change', () => {
+                    const item = box.closest('.checklist-item');
+                    if (box.checked) {
+                        state[key] = true;
+                        item.classList.add('is-checked');
+                    } else {
+                        delete state[key];
+                        item.classList.remove('is-checked');
+                    }
+                    save();
+                    updateProgress();
+                });
+            });
+
+            updateProgress();
+
+            // Expand / collapse all
+            const expandBtn = document.getElementById('btn-expand-all');
+            const collapseBtn = document.getElementById('btn-collapse-all');
+            const allDetails = document.querySelectorAll('#panel-checklist details.subcat');
+            if (expandBtn) expandBtn.addEventListener('click', () => allDetails.forEach(d => d.open = true));
+            if (collapseBtn) collapseBtn.addEventListener('click', () => allDetails.forEach(d => d.open = false));
+
+            // Reset
+            const resetBtn = document.getElementById('btn-reset');
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    if (!confirm('確定要清掉所有勾選嗎?')) return;
+                    state = {};
+                    save();
+                    checkboxes.forEach(b => {
+                        b.checked = false;
+                        b.closest('.checklist-item').classList.remove('is-checked');
+                    });
+                    updateProgress();
+                });
+            }
         })();
     </script>
 
